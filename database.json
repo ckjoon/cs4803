@@ -1,7 +1,7 @@
 {
     "survey questions": {
         "question1": {
-            "subject": "q1",
+            "subject": "If there is one thing you could change about the clinic, what would it be? It can be anything?",
             "result": {
                 "a1": {
                     "age": "3~5",
@@ -16,7 +16,7 @@
             }
         },
         "question2": {
-            "subject": "q1",
+            "subject": "What is your favorite thing about clinic?",
             "result": {
                 "a1": {
                     "age": "3~5",
@@ -31,7 +31,68 @@
             }
         },
         "question3": {
-            "subject": "q1",
+            "subject": "What is your least favorite thing about clinic?",
+            "result": {
+                "a1": {
+                    "age": "3~5",
+                    "gender": 0,
+                    "answer": "hi"
+                },
+                "a2": {
+                    "age": "3~5",
+                    "gender": 0,
+                    "answer": "hi"
+                }
+            }
+        },
+        "question4": {
+            "subject": "How do you feel while waiting in the waiting room?",
+            "result": {
+                "a1": {
+                    "age": "3~5",
+                    "gender": 0,
+                    "answer": "hi"
+                },
+                "a2": {
+                    "age": "3~5",
+                    "gender": 0,
+                    "answer": "hi"
+                }
+            }
+        },
+        "question5": {
+            "subject": "How do you feel while waiting after triage?",
+            "result": {
+                "a1": {
+                    "age": "3~5",
+                    "gender": 0,
+                    "answer": "hi"
+                },
+                "a2": {
+                    "age": "3~5",
+                    "gender": 0,
+                    "answer": "hi"
+                }
+            }
+        },
+        "question6": {
+            "subject": "How did you feel while waiting for the doctor after the nurse left?",
+            "result": {
+                "a1": {
+                    "age": "3~5",
+                    "gender": 0,
+                    "answer": "hi"
+                },
+                "a2": {
+                    "age": "3~5",
+                    "gender": 0,
+                    "answer": "hi"
+                }
+            }
+        },
+
+        "question7": {
+            "subject": "How did you feel while waiting after doctor left?",
             "result": {
                 "a1": {
                     "age": "3~5",
@@ -45,6 +106,97 @@
                 }
             }
         }
-
+    },
+    "data": {
+        "time1": {
+            "subject": "Arrival - Appontment",
+            "result": {
+                "a1": {
+                    "age": "3~5",
+                    "gender": 0,
+                    "answer": 0
+                },
+                "a2": {
+                    "age": "3~5",
+                    "gender": 0,
+                    "answer": 0
+                }
+            }
+        },
+        "time2": {
+            "subject": "Registration",
+            "result": {
+                "a1": {
+                    "age": "3~5",
+                    "gender": 0,
+                    "answer": 0
+                },
+                "a2": {
+                    "age": "3~5",
+                    "gender": 0,
+                    "answer": 0
+                }
+            }
+        },
+        "time3": {
+            "subject": "triage",
+            "result": {
+                "a1": {
+                    "age": "3~5",
+                    "gender": 0,
+                    "answer": 0
+                },
+                "a2": {
+                    "age": "3~5",
+                    "gender": 0,
+                    "answer": 0
+                }
+            }
+        },
+        "time4": {
+            "subject": "wait time",
+            "result": {
+                "a1": {
+                    "age": "3~5",
+                    "gender": 0,
+                    "answer": 0
+                },
+                "a2": {
+                    "age": "3~5",
+                    "gender": 0,
+                    "answer": 0
+                }
+            }
+        },
+        "time5": {
+            "subject": "MD check-in/out time",
+            "result": {
+                "a1": {
+                    "age": "3~5",
+                    "gender": 0,
+                    "answer": 0
+                },
+                "a2": {
+                    "age": "3~5",
+                    "gender": 0,
+                    "answer": 0
+                }
+            }
+        },
+        "time6": {
+            "subject": "Nurse check-in/out time?",
+            "result": {
+                "a1": {
+                    "age": "3~5",
+                    "gender": 0,
+                    "answer": 0
+                },
+                "a2": {
+                    "age": "3~5",
+                    "gender": 0,
+                    "answer": 0
+                }
+            }
+        }
     }
 }
