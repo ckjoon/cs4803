@@ -13,8 +13,7 @@
         .module('ducktab', ['firebase'])
         .controller("MyCtrl", function ($firebaseObject) {
             const rootRef = firebase.database().ref().child("survey questions");
-            const ref = rootRef.child("question1");
-            this.object = $firebaseObject(ref);
+            this.object = $firebaseObject(rootRef);
         });
 
     const txtEmail = document.getElementById('txtEmail');
@@ -22,6 +21,8 @@
     const btnLogin = document.getElementById('btnLogin');
     const btnSignup = document.getElementById('btnSignup');
     const btnLogout = document.getElementById('btnLogout');
+    const formLogin = document.getElementById('loginForm');
+    const datadump = document.getElementById('message');
     const email = txtEmail.value;
     const pass = txtPassword.value;
     console.log(email);
@@ -59,9 +60,18 @@
         if (firebaseUser) {
             console.log(firebaseUser);
             btnLogout.classList.remove('hide');
+            formLogin.classList.add('hide');
+            datadump.classList.remove('hide');
+
+
+
         } else {
             console.log("not logged in");
             btnLogout.classList.add('hide');
+            datadump.classList.add('hide');
+            formLogin.classList.remove('hide');
+
+
         }
     });
 
