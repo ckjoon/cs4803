@@ -7,126 +7,175 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D2E659E11DABD41000A5A465 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E659E01DABD41000A5A465 /* AppDelegate.swift */; };
-		D2E659E41DABD41000A5A465 /* ducktab.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D2E659E21DABD41000A5A465 /* ducktab.xcdatamodeld */; };
-		D2E659E61DABD41000A5A465 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E659E51DABD41000A5A465 /* MasterViewController.swift */; };
-		D2E659E81DABD41000A5A465 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E659E71DABD41000A5A465 /* DetailViewController.swift */; };
-		D2E659EB1DABD41000A5A465 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2E659E91DABD41000A5A465 /* Main.storyboard */; };
-		D2E659ED1DABD41000A5A465 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2E659EC1DABD41000A5A465 /* Assets.xcassets */; };
-		D2E659F01DABD41000A5A465 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2E659EE1DABD41000A5A465 /* LaunchScreen.storyboard */; };
-		D2E659FB1DABD41000A5A465 /* ducktabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E659FA1DABD41000A5A465 /* ducktabTests.swift */; };
-		D2E65A061DABD41000A5A465 /* ducktabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E65A051DABD41000A5A465 /* ducktabUITests.swift */; };
+		CCF35F40B4C2EFA5C862EC37 /* Pods_ducktabUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CD0B5700A4DC77E0E66E7F8 /* Pods_ducktabUITests.framework */; };
+		D254B1031DB5D435006569AA /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254B1021DB5D435006569AA /* Gender.swift */; };
+		D254B1051DB5DE24006569AA /* Age.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254B1041DB5DE24006569AA /* Age.swift */; };
+		D254B1071DB5E56B006569AA /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254B1061DB5E56B006569AA /* Survey.swift */; };
+		D2A5E2391DB5B395009070EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A5E2381DB5B395009070EE /* AppDelegate.swift */; };
+		D2A5E23B1DB5B395009070EE /* Introduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A5E23A1DB5B395009070EE /* Introduction.swift */; };
+		D2A5E23E1DB5B395009070EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2A5E23C1DB5B395009070EE /* Main.storyboard */; };
+		D2A5E2411DB5B395009070EE /* ducktab.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D2A5E23F1DB5B395009070EE /* ducktab.xcdatamodeld */; };
+		D2A5E2431DB5B395009070EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2A5E2421DB5B395009070EE /* Assets.xcassets */; };
+		D2A5E2461DB5B395009070EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2A5E2441DB5B395009070EE /* LaunchScreen.storyboard */; };
+		D2A5E2511DB5B395009070EE /* ducktabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A5E2501DB5B395009070EE /* ducktabTests.swift */; };
+		D2A5E25C1DB5B395009070EE /* ducktabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A5E25B1DB5B395009070EE /* ducktabUITests.swift */; };
+		D2A5E26C1DB5B3FF009070EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2A5E26B1DB5B3FF009070EE /* GoogleService-Info.plist */; };
+		EEBBEFA1F2A78895A81AFB39 /* Pods_ducktabTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A2A9C25A43D96EA46283E3 /* Pods_ducktabTests.framework */; };
+		EF46B99B36A81C71EE2EB4BC /* Pods_ducktab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641E5220289565C084568600 /* Pods_ducktab.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D2E659F71DABD41000A5A465 /* PBXContainerItemProxy */ = {
+		D2A5E24D1DB5B395009070EE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D2E659D51DABD41000A5A465 /* Project object */;
+			containerPortal = D2A5E22D1DB5B395009070EE /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D2E659DC1DABD41000A5A465;
+			remoteGlobalIDString = D2A5E2341DB5B395009070EE;
 			remoteInfo = ducktab;
 		};
-		D2E65A021DABD41000A5A465 /* PBXContainerItemProxy */ = {
+		D2A5E2581DB5B395009070EE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D2E659D51DABD41000A5A465 /* Project object */;
+			containerPortal = D2A5E22D1DB5B395009070EE /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D2E659DC1DABD41000A5A465;
+			remoteGlobalIDString = D2A5E2341DB5B395009070EE;
 			remoteInfo = ducktab;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D2E659DD1DABD41000A5A465 /* ducktab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ducktab.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2E659E01DABD41000A5A465 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D2E659E31DABD41000A5A465 /* ducktab.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ducktab.xcdatamodel; sourceTree = "<group>"; };
-		D2E659E51DABD41000A5A465 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		D2E659E71DABD41000A5A465 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		D2E659EA1DABD41000A5A465 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D2E659EC1DABD41000A5A465 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D2E659EF1DABD41000A5A465 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D2E659F11DABD41000A5A465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D2E659F61DABD41000A5A465 /* ducktabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ducktabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2E659FA1DABD41000A5A465 /* ducktabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ducktabTests.swift; sourceTree = "<group>"; };
-		D2E659FC1DABD41000A5A465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D2E65A011DABD41000A5A465 /* ducktabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ducktabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2E65A051DABD41000A5A465 /* ducktabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ducktabUITests.swift; sourceTree = "<group>"; };
-		D2E65A071DABD41000A5A465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33D95F14C35993E71F305E65 /* Pods-ducktabUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ducktabUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ducktabUITests/Pods-ducktabUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4E1F023619EA94029E1ACE0B /* Pods-ducktabTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ducktabTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ducktabTests/Pods-ducktabTests.release.xcconfig"; sourceTree = "<group>"; };
+		5FE1D1EFA78274DB9016B2A4 /* Pods-ducktabUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ducktabUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ducktabUITests/Pods-ducktabUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		641E5220289565C084568600 /* Pods_ducktab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ducktab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B7FCB47302D00E2ED3B309A /* Pods-ducktab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ducktab.release.xcconfig"; path = "Pods/Target Support Files/Pods-ducktab/Pods-ducktab.release.xcconfig"; sourceTree = "<group>"; };
+		6CD0B5700A4DC77E0E66E7F8 /* Pods_ducktabUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ducktabUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0A2A9C25A43D96EA46283E3 /* Pods_ducktabTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ducktabTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D254B1021DB5D435006569AA /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		D254B1041DB5DE24006569AA /* Age.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Age.swift; sourceTree = "<group>"; };
+		D254B1061DB5E56B006569AA /* Survey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
+		D2A5E2351DB5B395009070EE /* ducktab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ducktab.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2A5E2381DB5B395009070EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D2A5E23A1DB5B395009070EE /* Introduction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Introduction.swift; sourceTree = "<group>"; };
+		D2A5E23D1DB5B395009070EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D2A5E2401DB5B395009070EE /* ducktab.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ducktab.xcdatamodel; sourceTree = "<group>"; };
+		D2A5E2421DB5B395009070EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D2A5E2451DB5B395009070EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D2A5E2471DB5B395009070EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2A5E24C1DB5B395009070EE /* ducktabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ducktabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2A5E2501DB5B395009070EE /* ducktabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ducktabTests.swift; sourceTree = "<group>"; };
+		D2A5E2521DB5B395009070EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2A5E2571DB5B395009070EE /* ducktabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ducktabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2A5E25B1DB5B395009070EE /* ducktabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ducktabUITests.swift; sourceTree = "<group>"; };
+		D2A5E25D1DB5B395009070EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2A5E26B1DB5B3FF009070EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E56B5D360D27835A92835096 /* Pods-ducktabTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ducktabTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ducktabTests/Pods-ducktabTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F2FBD78D68CB480CB4B221A7 /* Pods-ducktab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ducktab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ducktab/Pods-ducktab.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D2E659DA1DABD41000A5A465 /* Frameworks */ = {
+		D2A5E2321DB5B395009070EE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF46B99B36A81C71EE2EB4BC /* Pods_ducktab.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2E659F31DABD41000A5A465 /* Frameworks */ = {
+		D2A5E2491DB5B395009070EE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEBBEFA1F2A78895A81AFB39 /* Pods_ducktabTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2E659FE1DABD41000A5A465 /* Frameworks */ = {
+		D2A5E2541DB5B395009070EE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCF35F40B4C2EFA5C862EC37 /* Pods_ducktabUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D2E659D41DABD41000A5A465 = {
+		2D0862ABB45F6ECA4B2FF73E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D2E659DF1DABD41000A5A465 /* ducktab */,
-				D2E659F91DABD41000A5A465 /* ducktabTests */,
-				D2E65A041DABD41000A5A465 /* ducktabUITests */,
-				D2E659DE1DABD41000A5A465 /* Products */,
+				641E5220289565C084568600 /* Pods_ducktab.framework */,
+				D0A2A9C25A43D96EA46283E3 /* Pods_ducktabTests.framework */,
+				6CD0B5700A4DC77E0E66E7F8 /* Pods_ducktabUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8206608760A16B750BBDB6B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F2FBD78D68CB480CB4B221A7 /* Pods-ducktab.debug.xcconfig */,
+				6B7FCB47302D00E2ED3B309A /* Pods-ducktab.release.xcconfig */,
+				E56B5D360D27835A92835096 /* Pods-ducktabTests.debug.xcconfig */,
+				4E1F023619EA94029E1ACE0B /* Pods-ducktabTests.release.xcconfig */,
+				5FE1D1EFA78274DB9016B2A4 /* Pods-ducktabUITests.debug.xcconfig */,
+				33D95F14C35993E71F305E65 /* Pods-ducktabUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D2A5E22C1DB5B395009070EE = {
+			isa = PBXGroup;
+			children = (
+				D2A5E2371DB5B395009070EE /* ducktab */,
+				D2A5E24F1DB5B395009070EE /* ducktabTests */,
+				D2A5E25A1DB5B395009070EE /* ducktabUITests */,
+				D2A5E2361DB5B395009070EE /* Products */,
+				8206608760A16B750BBDB6B9 /* Pods */,
+				2D0862ABB45F6ECA4B2FF73E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		D2E659DE1DABD41000A5A465 /* Products */ = {
+		D2A5E2361DB5B395009070EE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D2E659DD1DABD41000A5A465 /* ducktab.app */,
-				D2E659F61DABD41000A5A465 /* ducktabTests.xctest */,
-				D2E65A011DABD41000A5A465 /* ducktabUITests.xctest */,
+				D2A5E2351DB5B395009070EE /* ducktab.app */,
+				D2A5E24C1DB5B395009070EE /* ducktabTests.xctest */,
+				D2A5E2571DB5B395009070EE /* ducktabUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D2E659DF1DABD41000A5A465 /* ducktab */ = {
+		D2A5E2371DB5B395009070EE /* ducktab */ = {
 			isa = PBXGroup;
 			children = (
-				D2E659E01DABD41000A5A465 /* AppDelegate.swift */,
-				D2E659E51DABD41000A5A465 /* MasterViewController.swift */,
-				D2E659E71DABD41000A5A465 /* DetailViewController.swift */,
-				D2E659E91DABD41000A5A465 /* Main.storyboard */,
-				D2E659EC1DABD41000A5A465 /* Assets.xcassets */,
-				D2E659EE1DABD41000A5A465 /* LaunchScreen.storyboard */,
-				D2E659F11DABD41000A5A465 /* Info.plist */,
-				D2E659E21DABD41000A5A465 /* ducktab.xcdatamodeld */,
+				D2A5E26B1DB5B3FF009070EE /* GoogleService-Info.plist */,
+				D2A5E2381DB5B395009070EE /* AppDelegate.swift */,
+				D2A5E23A1DB5B395009070EE /* Introduction.swift */,
+				D2A5E23C1DB5B395009070EE /* Main.storyboard */,
+				D254B1041DB5DE24006569AA /* Age.swift */,
+				D2A5E2421DB5B395009070EE /* Assets.xcassets */,
+				D2A5E2441DB5B395009070EE /* LaunchScreen.storyboard */,
+				D2A5E2471DB5B395009070EE /* Info.plist */,
+				D2A5E23F1DB5B395009070EE /* ducktab.xcdatamodeld */,
+				D254B1021DB5D435006569AA /* Gender.swift */,
+				D254B1061DB5E56B006569AA /* Survey.swift */,
 			);
 			path = ducktab;
 			sourceTree = "<group>";
 		};
-		D2E659F91DABD41000A5A465 /* ducktabTests */ = {
+		D2A5E24F1DB5B395009070EE /* ducktabTests */ = {
 			isa = PBXGroup;
 			children = (
-				D2E659FA1DABD41000A5A465 /* ducktabTests.swift */,
-				D2E659FC1DABD41000A5A465 /* Info.plist */,
+				D2A5E2501DB5B395009070EE /* ducktabTests.swift */,
+				D2A5E2521DB5B395009070EE /* Info.plist */,
 			);
 			path = ducktabTests;
 			sourceTree = "<group>";
 		};
-		D2E65A041DABD41000A5A465 /* ducktabUITests */ = {
+		D2A5E25A1DB5B395009070EE /* ducktabUITests */ = {
 			isa = PBXGroup;
 			children = (
-				D2E65A051DABD41000A5A465 /* ducktabUITests.swift */,
-				D2E65A071DABD41000A5A465 /* Info.plist */,
+				D2A5E25B1DB5B395009070EE /* ducktabUITests.swift */,
+				D2A5E25D1DB5B395009070EE /* Info.plist */,
 			);
 			path = ducktabUITests;
 			sourceTree = "<group>";
@@ -134,13 +183,16 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D2E659DC1DABD41000A5A465 /* ducktab */ = {
+		D2A5E2341DB5B395009070EE /* ducktab */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D2E65A0A1DABD41000A5A465 /* Build configuration list for PBXNativeTarget "ducktab" */;
+			buildConfigurationList = D2A5E2601DB5B395009070EE /* Build configuration list for PBXNativeTarget "ducktab" */;
 			buildPhases = (
-				D2E659D91DABD41000A5A465 /* Sources */,
-				D2E659DA1DABD41000A5A465 /* Frameworks */,
-				D2E659DB1DABD41000A5A465 /* Resources */,
+				F0D46B0BB965F4404B123B2D /* [CP] Check Pods Manifest.lock */,
+				D2A5E2311DB5B395009070EE /* Sources */,
+				D2A5E2321DB5B395009070EE /* Frameworks */,
+				D2A5E2331DB5B395009070EE /* Resources */,
+				4A17EF89B592BB88A12781B7 /* [CP] Embed Pods Frameworks */,
+				F15B47FAE4D5876EC8790403 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,69 +200,75 @@
 			);
 			name = ducktab;
 			productName = ducktab;
-			productReference = D2E659DD1DABD41000A5A465 /* ducktab.app */;
+			productReference = D2A5E2351DB5B395009070EE /* ducktab.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D2E659F51DABD41000A5A465 /* ducktabTests */ = {
+		D2A5E24B1DB5B395009070EE /* ducktabTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D2E65A0D1DABD41000A5A465 /* Build configuration list for PBXNativeTarget "ducktabTests" */;
+			buildConfigurationList = D2A5E2631DB5B395009070EE /* Build configuration list for PBXNativeTarget "ducktabTests" */;
 			buildPhases = (
-				D2E659F21DABD41000A5A465 /* Sources */,
-				D2E659F31DABD41000A5A465 /* Frameworks */,
-				D2E659F41DABD41000A5A465 /* Resources */,
+				F5708AE3B43AAFDC5711C270 /* [CP] Check Pods Manifest.lock */,
+				D2A5E2481DB5B395009070EE /* Sources */,
+				D2A5E2491DB5B395009070EE /* Frameworks */,
+				D2A5E24A1DB5B395009070EE /* Resources */,
+				F3343FA5A04DC00482B3D8B6 /* [CP] Embed Pods Frameworks */,
+				9FA29DC6B286B451F7A9AA23 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D2E659F81DABD41000A5A465 /* PBXTargetDependency */,
+				D2A5E24E1DB5B395009070EE /* PBXTargetDependency */,
 			);
 			name = ducktabTests;
 			productName = ducktabTests;
-			productReference = D2E659F61DABD41000A5A465 /* ducktabTests.xctest */;
+			productReference = D2A5E24C1DB5B395009070EE /* ducktabTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D2E65A001DABD41000A5A465 /* ducktabUITests */ = {
+		D2A5E2561DB5B395009070EE /* ducktabUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D2E65A101DABD41000A5A465 /* Build configuration list for PBXNativeTarget "ducktabUITests" */;
+			buildConfigurationList = D2A5E2661DB5B395009070EE /* Build configuration list for PBXNativeTarget "ducktabUITests" */;
 			buildPhases = (
-				D2E659FD1DABD41000A5A465 /* Sources */,
-				D2E659FE1DABD41000A5A465 /* Frameworks */,
-				D2E659FF1DABD41000A5A465 /* Resources */,
+				21E01FA0B890AA8B3C0C0EA0 /* [CP] Check Pods Manifest.lock */,
+				D2A5E2531DB5B395009070EE /* Sources */,
+				D2A5E2541DB5B395009070EE /* Frameworks */,
+				D2A5E2551DB5B395009070EE /* Resources */,
+				3831DA30FD620A83761D900B /* [CP] Embed Pods Frameworks */,
+				E64E173886B4E45623EA8E60 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D2E65A031DABD41000A5A465 /* PBXTargetDependency */,
+				D2A5E2591DB5B395009070EE /* PBXTargetDependency */,
 			);
 			name = ducktabUITests;
 			productName = ducktabUITests;
-			productReference = D2E65A011DABD41000A5A465 /* ducktabUITests.xctest */;
+			productReference = D2A5E2571DB5B395009070EE /* ducktabUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D2E659D51DABD41000A5A465 /* Project object */ = {
+		D2A5E22D1DB5B395009070EE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = "Georgia Tech";
+				ORGANIZATIONNAME = gatech.edu;
 				TargetAttributes = {
-					D2E659DC1DABD41000A5A465 = {
+					D2A5E2341DB5B395009070EE = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
-					D2E659F51DABD41000A5A465 = {
+					D2A5E24B1DB5B395009070EE = {
 						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = D2E659DC1DABD41000A5A465;
+						TestTargetID = D2A5E2341DB5B395009070EE;
 					};
-					D2E65A001DABD41000A5A465 = {
+					D2A5E2561DB5B395009070EE = {
 						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = D2E659DC1DABD41000A5A465;
+						TestTargetID = D2A5E2341DB5B395009070EE;
 					};
 				};
 			};
-			buildConfigurationList = D2E659D81DABD41000A5A465 /* Build configuration list for PBXProject "ducktab" */;
+			buildConfigurationList = D2A5E2301DB5B395009070EE /* Build configuration list for PBXProject "ducktab" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -218,37 +276,38 @@
 				en,
 				Base,
 			);
-			mainGroup = D2E659D41DABD41000A5A465;
-			productRefGroup = D2E659DE1DABD41000A5A465 /* Products */;
+			mainGroup = D2A5E22C1DB5B395009070EE;
+			productRefGroup = D2A5E2361DB5B395009070EE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D2E659DC1DABD41000A5A465 /* ducktab */,
-				D2E659F51DABD41000A5A465 /* ducktabTests */,
-				D2E65A001DABD41000A5A465 /* ducktabUITests */,
+				D2A5E2341DB5B395009070EE /* ducktab */,
+				D2A5E24B1DB5B395009070EE /* ducktabTests */,
+				D2A5E2561DB5B395009070EE /* ducktabUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D2E659DB1DABD41000A5A465 /* Resources */ = {
+		D2A5E2331DB5B395009070EE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2E659F01DABD41000A5A465 /* LaunchScreen.storyboard in Resources */,
-				D2E659ED1DABD41000A5A465 /* Assets.xcassets in Resources */,
-				D2E659EB1DABD41000A5A465 /* Main.storyboard in Resources */,
+				D2A5E2461DB5B395009070EE /* LaunchScreen.storyboard in Resources */,
+				D2A5E26C1DB5B3FF009070EE /* GoogleService-Info.plist in Resources */,
+				D2A5E2431DB5B395009070EE /* Assets.xcassets in Resources */,
+				D2A5E23E1DB5B395009070EE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2E659F41DABD41000A5A465 /* Resources */ = {
+		D2A5E24A1DB5B395009070EE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2E659FF1DABD41000A5A465 /* Resources */ = {
+		D2A5E2551DB5B395009070EE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -257,62 +316,202 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		21E01FA0B890AA8B3C0C0EA0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3831DA30FD620A83761D900B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ducktabUITests/Pods-ducktabUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A17EF89B592BB88A12781B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ducktab/Pods-ducktab-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FA29DC6B286B451F7A9AA23 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ducktabTests/Pods-ducktabTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E64E173886B4E45623EA8E60 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ducktabUITests/Pods-ducktabUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0D46B0BB965F4404B123B2D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F15B47FAE4D5876EC8790403 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ducktab/Pods-ducktab-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3343FA5A04DC00482B3D8B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ducktabTests/Pods-ducktabTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5708AE3B43AAFDC5711C270 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		D2E659D91DABD41000A5A465 /* Sources */ = {
+		D2A5E2311DB5B395009070EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2E659E41DABD41000A5A465 /* ducktab.xcdatamodeld in Sources */,
-				D2E659E11DABD41000A5A465 /* AppDelegate.swift in Sources */,
-				D2E659E61DABD41000A5A465 /* MasterViewController.swift in Sources */,
-				D2E659E81DABD41000A5A465 /* DetailViewController.swift in Sources */,
+				D254B1031DB5D435006569AA /* Gender.swift in Sources */,
+				D2A5E23B1DB5B395009070EE /* Introduction.swift in Sources */,
+				D2A5E2411DB5B395009070EE /* ducktab.xcdatamodeld in Sources */,
+				D254B1071DB5E56B006569AA /* Survey.swift in Sources */,
+				D254B1051DB5DE24006569AA /* Age.swift in Sources */,
+				D2A5E2391DB5B395009070EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2E659F21DABD41000A5A465 /* Sources */ = {
+		D2A5E2481DB5B395009070EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2E659FB1DABD41000A5A465 /* ducktabTests.swift in Sources */,
+				D2A5E2511DB5B395009070EE /* ducktabTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2E659FD1DABD41000A5A465 /* Sources */ = {
+		D2A5E2531DB5B395009070EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2E65A061DABD41000A5A465 /* ducktabUITests.swift in Sources */,
+				D2A5E25C1DB5B395009070EE /* ducktabUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D2E659F81DABD41000A5A465 /* PBXTargetDependency */ = {
+		D2A5E24E1DB5B395009070EE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D2E659DC1DABD41000A5A465 /* ducktab */;
-			targetProxy = D2E659F71DABD41000A5A465 /* PBXContainerItemProxy */;
+			target = D2A5E2341DB5B395009070EE /* ducktab */;
+			targetProxy = D2A5E24D1DB5B395009070EE /* PBXContainerItemProxy */;
 		};
-		D2E65A031DABD41000A5A465 /* PBXTargetDependency */ = {
+		D2A5E2591DB5B395009070EE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D2E659DC1DABD41000A5A465 /* ducktab */;
-			targetProxy = D2E65A021DABD41000A5A465 /* PBXContainerItemProxy */;
+			target = D2A5E2341DB5B395009070EE /* ducktab */;
+			targetProxy = D2A5E2581DB5B395009070EE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D2E659E91DABD41000A5A465 /* Main.storyboard */ = {
+		D2A5E23C1DB5B395009070EE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D2E659EA1DABD41000A5A465 /* Base */,
+				D2A5E23D1DB5B395009070EE /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		D2E659EE1DABD41000A5A465 /* LaunchScreen.storyboard */ = {
+		D2A5E2441DB5B395009070EE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D2E659EF1DABD41000A5A465 /* Base */,
+				D2A5E2451DB5B395009070EE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -320,7 +519,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		D2E65A081DABD41000A5A465 /* Debug */ = {
+		D2A5E25E1DB5B395009070EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -366,7 +565,7 @@
 			};
 			name = Debug;
 		};
-		D2E65A091DABD41000A5A465 /* Release */ = {
+		D2A5E25F1DB5B395009070EE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -405,71 +604,75 @@
 			};
 			name = Release;
 		};
-		D2E65A0B1DABD41000A5A465 /* Debug */ = {
+		D2A5E2611DB5B395009070EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2FBD78D68CB480CB4B221A7 /* Pods-ducktab.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ducktab/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = gatech.ducktab;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.gatech.ducktab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
-		D2E65A0C1DABD41000A5A465 /* Release */ = {
+		D2A5E2621DB5B395009070EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B7FCB47302D00E2ED3B309A /* Pods-ducktab.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ducktab/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = gatech.ducktab;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.gatech.ducktab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
-		D2E65A0E1DABD41000A5A465 /* Debug */ = {
+		D2A5E2641DB5B395009070EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E56B5D360D27835A92835096 /* Pods-ducktabTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ducktabTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = gatech.ducktabTests;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.gatech.ducktabTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ducktab.app/ducktab";
 			};
 			name = Debug;
 		};
-		D2E65A0F1DABD41000A5A465 /* Release */ = {
+		D2A5E2651DB5B395009070EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E1F023619EA94029E1ACE0B /* Pods-ducktabTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ducktabTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = gatech.ducktabTests;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.gatech.ducktabTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ducktab.app/ducktab";
 			};
 			name = Release;
 		};
-		D2E65A111DABD41000A5A465 /* Debug */ = {
+		D2A5E2671DB5B395009070EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FE1D1EFA78274DB9016B2A4 /* Pods-ducktabUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = ducktabUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = gatech.ducktabUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.gatech.ducktabUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = ducktab;
 			};
 			name = Debug;
 		};
-		D2E65A121DABD41000A5A465 /* Release */ = {
+		D2A5E2681DB5B395009070EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33D95F14C35993E71F305E65 /* Pods-ducktabUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = ducktabUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = gatech.ducktabUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.gatech.ducktabUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = ducktab;
 			};
@@ -478,53 +681,56 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D2E659D81DABD41000A5A465 /* Build configuration list for PBXProject "ducktab" */ = {
+		D2A5E2301DB5B395009070EE /* Build configuration list for PBXProject "ducktab" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D2E65A081DABD41000A5A465 /* Debug */,
-				D2E65A091DABD41000A5A465 /* Release */,
+				D2A5E25E1DB5B395009070EE /* Debug */,
+				D2A5E25F1DB5B395009070EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D2E65A0A1DABD41000A5A465 /* Build configuration list for PBXNativeTarget "ducktab" */ = {
+		D2A5E2601DB5B395009070EE /* Build configuration list for PBXNativeTarget "ducktab" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D2E65A0B1DABD41000A5A465 /* Debug */,
-				D2E65A0C1DABD41000A5A465 /* Release */,
+				D2A5E2611DB5B395009070EE /* Debug */,
+				D2A5E2621DB5B395009070EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		D2E65A0D1DABD41000A5A465 /* Build configuration list for PBXNativeTarget "ducktabTests" */ = {
+		D2A5E2631DB5B395009070EE /* Build configuration list for PBXNativeTarget "ducktabTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D2E65A0E1DABD41000A5A465 /* Debug */,
-				D2E65A0F1DABD41000A5A465 /* Release */,
+				D2A5E2641DB5B395009070EE /* Debug */,
+				D2A5E2651DB5B395009070EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		D2E65A101DABD41000A5A465 /* Build configuration list for PBXNativeTarget "ducktabUITests" */ = {
+		D2A5E2661DB5B395009070EE /* Build configuration list for PBXNativeTarget "ducktabUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D2E65A111DABD41000A5A465 /* Debug */,
-				D2E65A121DABD41000A5A465 /* Release */,
+				D2A5E2671DB5B395009070EE /* Debug */,
+				D2A5E2681DB5B395009070EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		D2E659E21DABD41000A5A465 /* ducktab.xcdatamodeld */ = {
+		D2A5E23F1DB5B395009070EE /* ducktab.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				D2E659E31DABD41000A5A465 /* ducktab.xcdatamodel */,
+				D2A5E2401DB5B395009070EE /* ducktab.xcdatamodel */,
 			);
-			currentVersion = D2E659E31DABD41000A5A465 /* ducktab.xcdatamodel */;
+			currentVersion = D2A5E2401DB5B395009070EE /* ducktab.xcdatamodel */;
 			path = ducktab.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = D2E659D51DABD41000A5A465 /* Project object */;
+	rootObject = D2A5E22D1DB5B395009070EE /* Project object */;
 }

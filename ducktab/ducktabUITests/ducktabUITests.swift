@@ -2,8 +2,8 @@
 //  ducktabUITests.swift
 //  ducktabUITests
 //
-//  Created by Yeon Joon Choi on 10/10/16.
-//  Copyright © 2016 Georgia Tech. All rights reserved.
+//  Created by Yeon Joon Choi on 10/17/16.
+//  Copyright © 2016 gatech.edu. All rights reserved.
 //
 
 import XCTest
