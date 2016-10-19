@@ -108,6 +108,19 @@ class QRcode: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             }
         }
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "toPlayground") {
+            if let svc = segue.destinationViewController as? GamePlayground{
+                svc.currentImage = currentImage
+                svc.currentGender = currentGender
+                svc.currentAge = currentAge;
+                svc.currentURL = messageLabel.text
+                
+            }
+        }
+        
+    }
 
     
 
