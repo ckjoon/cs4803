@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CCF35F40B4C2EFA5C862EC37 /* Pods_ducktabUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CD0B5700A4DC77E0E66E7F8 /* Pods_ducktabUITests.framework */; };
+		D20B5A941DB6F3F200F692AD /* QRcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20B5A931DB6F3F200F692AD /* QRcode.swift */; };
 		D254B1031DB5D435006569AA /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254B1021DB5D435006569AA /* Gender.swift */; };
 		D254B1051DB5DE24006569AA /* Age.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254B1041DB5DE24006569AA /* Age.swift */; };
 		D254B1071DB5E56B006569AA /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254B1061DB5E56B006569AA /* Survey.swift */; };
@@ -20,8 +20,6 @@
 		D2A5E2511DB5B395009070EE /* ducktabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A5E2501DB5B395009070EE /* ducktabTests.swift */; };
 		D2A5E25C1DB5B395009070EE /* ducktabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A5E25B1DB5B395009070EE /* ducktabUITests.swift */; };
 		D2A5E26C1DB5B3FF009070EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2A5E26B1DB5B3FF009070EE /* GoogleService-Info.plist */; };
-		EEBBEFA1F2A78895A81AFB39 /* Pods_ducktabTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A2A9C25A43D96EA46283E3 /* Pods_ducktabTests.framework */; };
-		EF46B99B36A81C71EE2EB4BC /* Pods_ducktab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641E5220289565C084568600 /* Pods_ducktab.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +43,8 @@
 		33D95F14C35993E71F305E65 /* Pods-ducktabUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ducktabUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ducktabUITests/Pods-ducktabUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4E1F023619EA94029E1ACE0B /* Pods-ducktabTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ducktabTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ducktabTests/Pods-ducktabTests.release.xcconfig"; sourceTree = "<group>"; };
 		5FE1D1EFA78274DB9016B2A4 /* Pods-ducktabUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ducktabUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ducktabUITests/Pods-ducktabUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		641E5220289565C084568600 /* Pods_ducktab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ducktab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B7FCB47302D00E2ED3B309A /* Pods-ducktab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ducktab.release.xcconfig"; path = "Pods/Target Support Files/Pods-ducktab/Pods-ducktab.release.xcconfig"; sourceTree = "<group>"; };
-		6CD0B5700A4DC77E0E66E7F8 /* Pods_ducktabUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ducktabUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0A2A9C25A43D96EA46283E3 /* Pods_ducktabTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ducktabTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D20B5A931DB6F3F200F692AD /* QRcode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRcode.swift; sourceTree = "<group>"; };
 		D254B1021DB5D435006569AA /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		D254B1041DB5DE24006569AA /* Age.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Age.swift; sourceTree = "<group>"; };
 		D254B1061DB5E56B006569AA /* Survey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
@@ -76,7 +72,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF46B99B36A81C71EE2EB4BC /* Pods_ducktab.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +79,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEBBEFA1F2A78895A81AFB39 /* Pods_ducktabTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +86,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCF35F40B4C2EFA5C862EC37 /* Pods_ducktabUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,9 +95,6 @@
 		2D0862ABB45F6ECA4B2FF73E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				641E5220289565C084568600 /* Pods_ducktab.framework */,
-				D0A2A9C25A43D96EA46283E3 /* Pods_ducktabTests.framework */,
-				6CD0B5700A4DC77E0E66E7F8 /* Pods_ducktabUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -151,6 +141,7 @@
 				D2A5E2381DB5B395009070EE /* AppDelegate.swift */,
 				D2A5E23A1DB5B395009070EE /* Introduction.swift */,
 				D2A5E23C1DB5B395009070EE /* Main.storyboard */,
+				D20B5A931DB6F3F200F692AD /* QRcode.swift */,
 				D254B1041DB5DE24006569AA /* Age.swift */,
 				D2A5E2421DB5B395009070EE /* Assets.xcassets */,
 				D2A5E2441DB5B395009070EE /* LaunchScreen.storyboard */,
@@ -465,6 +456,7 @@
 				D254B1071DB5E56B006569AA /* Survey.swift in Sources */,
 				D254B1051DB5DE24006569AA /* Age.swift in Sources */,
 				D2A5E2391DB5B395009070EE /* AppDelegate.swift in Sources */,
+				D20B5A941DB6F3F200F692AD /* QRcode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,6 +549,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MACH_O_TYPE = mh_execute;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -597,6 +590,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MACH_O_TYPE = mh_execute;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;

@@ -49,12 +49,19 @@ class Survey: UIViewController {
                     "answer": question1Answer.text]
         let childUpdates = ["\(key)":post]
         surveys.child("question1").child("result").updateChildValues(childUpdates);
-        
-
-        
-        
     }
     
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "toQRcode") {
+            if let svc = segue.destinationViewController as? QRcode{
+                svc.currentImage = cImage
+                svc.currentGender = cGender
+                svc.currentAge = cAge;
+            }
+        }
+        
+    }
     
     
 
