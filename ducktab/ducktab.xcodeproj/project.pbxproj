@@ -11,6 +11,7 @@
 		D254B1031DB5D435006569AA /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254B1021DB5D435006569AA /* Gender.swift */; };
 		D254B1051DB5DE24006569AA /* Age.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254B1041DB5DE24006569AA /* Age.swift */; };
 		D254B1071DB5E56B006569AA /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254B1061DB5E56B006569AA /* Survey.swift */; };
+		D28AD2611DB85FEC00B9284A /* DrawOwn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28AD2601DB85FEC00B9284A /* DrawOwn.swift */; };
 		D29CFCA41DB714AB00B3CD65 /* GamePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29CFCA31DB714AB00B3CD65 /* GamePlayground.swift */; };
 		D2A5E2391DB5B395009070EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A5E2381DB5B395009070EE /* AppDelegate.swift */; };
 		D2A5E23B1DB5B395009070EE /* Introduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A5E23A1DB5B395009070EE /* Introduction.swift */; };
@@ -49,6 +50,7 @@
 		D254B1021DB5D435006569AA /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		D254B1041DB5DE24006569AA /* Age.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Age.swift; sourceTree = "<group>"; };
 		D254B1061DB5E56B006569AA /* Survey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
+		D28AD2601DB85FEC00B9284A /* DrawOwn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawOwn.swift; sourceTree = "<group>"; };
 		D29CFCA31DB714AB00B3CD65 /* GamePlayground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePlayground.swift; sourceTree = "<group>"; };
 		D2A5E2351DB5B395009070EE /* ducktab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ducktab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A5E2381DB5B395009070EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				D254B1021DB5D435006569AA /* Gender.swift */,
 				D254B1061DB5E56B006569AA /* Survey.swift */,
 				D29CFCA31DB714AB00B3CD65 /* GamePlayground.swift */,
+				D28AD2601DB85FEC00B9284A /* DrawOwn.swift */,
 			);
 			path = ducktab;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				D2A5E2391DB5B395009070EE /* AppDelegate.swift in Sources */,
 				D29CFCA41DB714AB00B3CD65 /* GamePlayground.swift in Sources */,
 				D20B5A941DB6F3F200F692AD /* QRcode.swift in Sources */,
+				D28AD2611DB85FEC00B9284A /* DrawOwn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
