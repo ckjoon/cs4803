@@ -90,6 +90,14 @@ class Age: UIViewController {
             }
         }
         
+        if (segue.identifier == "toGender") {
+            if let svc = segue.destinationViewController as? Gender{
+                svc.currentImage = currentImage
+                svc.genderText = currentGender
+            }
+        }
+
+        
     }
 
     

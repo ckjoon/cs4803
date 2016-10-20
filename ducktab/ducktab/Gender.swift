@@ -14,6 +14,7 @@ import Firebase
 class Gender: UIViewController {
     
     var currentImage: UIImage!
+    var genderText:String!
     @IBOutlet weak var gen: UILabel!
     
     @IBOutlet weak var cImage: UIImageView!
@@ -22,6 +23,9 @@ class Gender: UIViewController {
         super.viewDidLoad()
         cImage.image = currentImage
         gen.text = "BOY"
+        if((genderText) != ""){
+            gen.text=genderText
+        }
     }
     
     @IBAction func boyClicked(sender: AnyObject) {
@@ -40,6 +44,13 @@ class Gender: UIViewController {
                 svc.currentGender = gen.text
             }
         }
+        if (segue.identifier == "toIntroduction") {
+            if let svc = segue.destinationViewController as? Introduction{
+                svc.cImage = currentImage
+                
+            }
+        }
         
     }
+    
 }

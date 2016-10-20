@@ -11,11 +11,15 @@ import Firebase
 
 class Introduction: UIViewController {
     
+    var cImage:UIImage!
     @IBOutlet weak var currentImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        currentImage.image = UIImage(named:"meowth")
+        currentImage.image = UIImage(named:"meowth_icon")
+        if((cImage) != nil){
+            currentImage.image=cImage
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -30,24 +34,24 @@ class Introduction: UIViewController {
     }
     
     @IBAction func meowthClicked(sender: UIButton) {
-        currentImage.image = UIImage(named:"meowth")
+        currentImage.image = UIImage(named:"meowth_icon")
     }
 
     @IBAction func snorlaxClicked(sender: AnyObject) {
-        currentImage.image = UIImage(named:"snorlax")
+        currentImage.image = UIImage(named:"snorlax_icon")
     }
     
     @IBAction func charmandarClicked(sender: AnyObject) {
-        currentImage.image = UIImage(named:"charmander")
+        currentImage.image = UIImage(named:"charmander_icon")
     }
     
     
     @IBAction func caterpieClicked(sender: AnyObject) {
-        currentImage.image = UIImage(named:"caterpie")
+        currentImage.image = UIImage(named:"caterpie_icon")
     }
     
     @IBAction func dratiniClicked(sender: AnyObject) {
-        currentImage.image = UIImage(named:"dratini")
+        currentImage.image = UIImage(named:"dratini_icon")
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
