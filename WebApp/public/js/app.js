@@ -54,6 +54,11 @@
             });
         }])
         .controller("HomeCtrl", ['$scope', '$firebaseObject', '$document', '$location', '$q', function ($scope, $firebaseObject, $document, $location, $q) {
+
+          // if (firebase.auth.currentUser == undefined){
+          //   firebase.auth().signOut();
+          //   $location.path("/");
+          // }
           var rootRef = firebase.database().ref().child("survey questions");
           $firebaseObject(rootRef).$bindTo($scope, "surveyQuestions");
           var goToQuestionDetail = function(){
@@ -76,6 +81,11 @@
           $scope.backToQuestions = function(){
             $location.path('/home');
           }
+          var btnLogout = $document[0].getElementById('btnLogout');
+          btnLogout.addEventListener('click', e => {
+              firebase.auth().signOut();
+              $location.path("/");
+          });
 
         }])
         .config(function($routeProvider){

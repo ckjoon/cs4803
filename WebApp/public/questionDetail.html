@@ -1,6 +1,17 @@
-<button id="btnBackToQuestions" ng-click="backToQuestions()">
-  Back To Questions
-</button>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">DuckTab</a>
+      <button id="btnBackToQuestions" class="btn btn-warning pull-right" ng-click="backToQuestions()">
+        Back To Questions
+      </button>
+      <button id=btnLogout class="btn btn-danger pull-right">
+        Logout
+      </button>
+    </div>
+  </div>
+</nav>
+
 <div ng-repeat="questionAnswer in questionAnswers" ng-if="questionAnswer.subject == question">
   {{questionAnswer.subject}}
   <ul>
