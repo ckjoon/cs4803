@@ -1,0 +1,11 @@
+<button id="btnBackToQuestions" ng-click="backToQuestions()">
+  Back To Questions
+</button>
+<div ng-repeat="questionAnswer in questionAnswers" ng-if="questionAnswer.subject == question">
+  {{questionAnswer.subject}}
+  <ul>
+    <li ng-repeat = "r in questionAnswer.result">
+      {{r.answer}}
+    </li>
+  </ul>
+</div>

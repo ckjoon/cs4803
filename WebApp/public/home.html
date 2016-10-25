@@ -1,0 +1,13 @@
+<button id=btnLogout>
+  Logout
+</button>
+<div >
+  <ul>
+    <li ng-repeat="surveyQuestion in surveyQuestions">
+      {{surveyQuestion.subject}}
+      <button class="detailsButton" ng-click="openDetails(surveyQuestion.subject)">
+        Details
+      </button>
+    </li>
+  </ul>
+</div>
