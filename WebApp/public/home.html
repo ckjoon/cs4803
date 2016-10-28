@@ -1,34 +1,41 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/">DuckTab</a>
-      <button id=btnLogout class="btn btn-danger pull-right">
-        Logout
-      </button>
+    <div class="page-header">
+      <h1 style="padding-left:30px">Welcome to Ducktab!</h1> 
     </div>
+      <button id=btnLogout class="btn btn-danger pull-right">Logout</button>
   </div>
 </nav>
+
 <div>
-  <table class="table">
-    <tr>
-      <th>
-        Feeback Question
-      </th>
-      <th>
-        Sentiment
-      </th>
-      <th>
-        Detail
-      </th>
-    </tr>
-    <tr ng-repeat="surveyQuestion in surveyQuestions">
-      <td>{{surveyQuestion.subject}}</td>
-      <td>68%</td>
-      <td>
-        <button class="btn btn-primary" ng-click="openDetails(surveyQuestion.subject)">
-          Details
-        </button>
-      </td>
-    </tr>
-  </table>
+    <div class="col-lg-6 left"><h2># of Patients Online</h2></div>
+    <div class="col-lg-6 right"><h2>Overall Feedback Sentiment</h2></div>
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="rooms col-lg-3 col-md-3 col-sm-6 col-xs-6"><h3>Reception</h3></div>
+        <div class="rooms col-lg-3 col-md-3 col-sm-6 col-xs-6"><h3>Treatment Room</h3></div>
+        <div class="rooms col-lg-3 col-md-3 col-sm-6 col-xs-6"><h3>Sedation Room</h3></div>
+        <div class="rooms col-lg-3 col-md-3 col-sm-6 col-xs-6"><h3>Pharmacy</h3></div>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+            <th>Feedback Questions</th>
+            <th>Sentiment</th>
+            <th>Detail</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="surveyQuestion in surveyQuestions">
+            <td>{{surveyQuestion.subject}}</td>
+            <td>68%</td>
+            <td class="no-padding">
+                <button class="btn btn-primary" ng-click="openDetails(surveyQuestion.subject)">Details</button>
+            </td>
+        </tr>
+      </tbody>
+    </table>
 </div>
