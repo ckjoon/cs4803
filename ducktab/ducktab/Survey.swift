@@ -53,11 +53,11 @@ class Survey: UIViewController {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "toQRcode") {
-            if let svc = segue.destinationViewController as? QRcode{
-                svc.currentImage = cImage
-                svc.currentGender = cGender
-                svc.currentAge = cAge;
+        if (segue.identifier == "backToInst") {
+            if let svc = segue.destinationViewController as? QRInstruction{
+                svc.cImage = cImage
+                svc.cGender = cGender
+                svc.cAge = cAge
             }
         }
         

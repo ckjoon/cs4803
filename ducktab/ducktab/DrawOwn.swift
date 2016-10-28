@@ -60,10 +60,6 @@ class DrawOwn: UIViewController {
         
     }
     
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        return UIInterfaceOrientationMask.Landscape
-    }
-    
     func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint) {
         
         // 1
@@ -98,6 +94,9 @@ class DrawOwn: UIViewController {
             lastPoint = touch.locationInView(self.view)
         }
         
+    }
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
     }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {

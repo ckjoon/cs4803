@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D20B5A941DB6F3F200F692AD /* QRcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20B5A931DB6F3F200F692AD /* QRcode.swift */; };
+		D24648681DC3DBCF0097AF5B /* QRInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24648671DC3DBCF0097AF5B /* QRInstruction.swift */; };
 		D254B1031DB5D435006569AA /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254B1021DB5D435006569AA /* Gender.swift */; };
 		D254B1051DB5DE24006569AA /* Age.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254B1041DB5DE24006569AA /* Age.swift */; };
 		D254B1071DB5E56B006569AA /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254B1061DB5E56B006569AA /* Survey.swift */; };
@@ -47,6 +48,7 @@
 		5FE1D1EFA78274DB9016B2A4 /* Pods-ducktabUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ducktabUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ducktabUITests/Pods-ducktabUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6B7FCB47302D00E2ED3B309A /* Pods-ducktab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ducktab.release.xcconfig"; path = "Pods/Target Support Files/Pods-ducktab/Pods-ducktab.release.xcconfig"; sourceTree = "<group>"; };
 		D20B5A931DB6F3F200F692AD /* QRcode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRcode.swift; sourceTree = "<group>"; };
+		D24648671DC3DBCF0097AF5B /* QRInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRInstruction.swift; sourceTree = "<group>"; };
 		D254B1021DB5D435006569AA /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		D254B1041DB5DE24006569AA /* Age.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Age.swift; sourceTree = "<group>"; };
 		D254B1061DB5E56B006569AA /* Survey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				D2A5E2381DB5B395009070EE /* AppDelegate.swift */,
 				D2A5E23A1DB5B395009070EE /* Introduction.swift */,
 				D2A5E23C1DB5B395009070EE /* Main.storyboard */,
+				D24648671DC3DBCF0097AF5B /* QRInstruction.swift */,
 				D20B5A931DB6F3F200F692AD /* QRcode.swift */,
 				D254B1041DB5DE24006569AA /* Age.swift */,
 				D2A5E2421DB5B395009070EE /* Assets.xcassets */,
@@ -467,6 +470,7 @@
 				D29CFCA41DB714AB00B3CD65 /* GamePlayground.swift in Sources */,
 				D20B5A941DB6F3F200F692AD /* QRcode.swift in Sources */,
 				D28AD2611DB85FEC00B9284A /* DrawOwn.swift in Sources */,
+				D24648681DC3DBCF0097AF5B /* QRInstruction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

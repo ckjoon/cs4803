@@ -28,7 +28,19 @@ class GamePlayground: UIViewController {
     }
     
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        return UIInterfaceOrientationMask.Landscape
+        return UIInterfaceOrientationMask.Portrait
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "toSurvey") {
+            if let svc = segue.destinationViewController as? Survey{
+                svc.cImage = currentImage
+                svc.cGender = currentGender
+                svc.cAge = currentAge
+            }
+        }
+        
     }
 
 

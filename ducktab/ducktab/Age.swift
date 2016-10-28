@@ -82,15 +82,15 @@ class Age: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "toSurvey") {
-            if let svc = segue.destinationViewController as? Survey{
+        if (segue.identifier == "toInst") {
+            if let svc = segue.destinationViewController as? QRInstruction{
                 svc.cImage = currentImage
                 svc.cGender = currentGender
                 svc.cAge = currentAge
             }
         }
         
-        if (segue.identifier == "toGender") {
+        if (segue.identifier == "backToAge") {
             if let svc = segue.destinationViewController as? Gender{
                 svc.currentImage = currentImage
                 svc.genderText = currentGender
