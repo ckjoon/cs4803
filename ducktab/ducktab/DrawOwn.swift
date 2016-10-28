@@ -72,17 +72,17 @@ class DrawOwn: UIViewController {
         TempImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
         
         // 2
-        CGContextMoveToPoint(context, fromPoint.x, fromPoint.y)
-        CGContextAddLineToPoint(context, toPoint.x, toPoint.y)
+        CGContextMoveToPoint(context!, fromPoint.x, fromPoint.y)
+        CGContextAddLineToPoint(context!, toPoint.x, toPoint.y)
         
         // 3
-        CGContextSetLineCap(context, .Round)
-        CGContextSetLineWidth(context, brushWidth)
-        CGContextSetRGBStrokeColor(context, red, green, blue, 1.0)
-        CGContextSetBlendMode(context, .Normal)
+        CGContextSetLineCap(context!, .Round)
+        CGContextSetLineWidth(context!, brushWidth)
+        CGContextSetRGBStrokeColor(context!, red, green, blue, 1.0)
+        CGContextSetBlendMode(context!, .Normal)
         
         // 4
-        CGContextStrokePath(context)
+        CGContextStrokePath(context!)
         
         // 5
         TempImageView.image = UIGraphicsGetImageFromCurrentImageContext()
@@ -127,4 +127,20 @@ class DrawOwn: UIViewController {
         TempImageView.image = nil
 
     }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "fromDrawToGender") {
+            if let svc = segue.destinationViewController as? Gender{
+                UIGraphicsBeginImageContext(MainImageView.bounds.size)
+                MainImageView.image?.drawInRect(CGRect(x: 0, y: 0,
+                    width: MainImageView.frame.size.width, height: MainImageView.frame.size.height))
+                let image = UIGraphicsGetImageFromCurrentImageContext()
+                UIGraphicsEndImageContext()
+                svc.currentImage = image
+            }
+        }
+        
+    }
+
 }
