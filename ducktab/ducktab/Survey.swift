@@ -57,7 +57,9 @@ class Survey: UIViewController {
         surveys.observeSingleEventOfType(.Value, withBlock:  {snapshot in
             var i = 0;
             for child in snapshot.children{
-                self.labels[i++].text = child.key! as String
+                self.labels[i].text = child.key! as String
+                self.answers[i].hidden = false;
+                i++
             }
         })
     }

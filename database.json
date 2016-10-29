@@ -111,7 +111,7 @@
         "presedation_room": {
             "key": "UUID"
         },
-        "pretprocedure_room": {
+        "preprocedure_room": {
             "key": "UUID"
         },
         "postsedation_room": {
