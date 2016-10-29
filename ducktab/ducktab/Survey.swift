@@ -92,6 +92,14 @@ class Survey: UIViewController {
                 }
                 i = i+1;
             }
+            let node = rootRef.child("current_location").child(currentLocation);
+            let query = rootRef.child("current_location").child(currentLocation).queryOrderedByValue().queryEqualToValue(UUIDValue)
+            query.observeSingleEventOfType(.Value, withBlock: { snapshot in
+                for child in snapshot.children {
+                    self.currentLocation = (child.key!)
+                    node.child(child.key! as String).removeValue()
+                }
+            })
             if let svc = segue.destinationViewController as? QRInstruction{
                 svc.cImage = cImage
                 svc.cGender = cGender
