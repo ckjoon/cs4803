@@ -16,8 +16,8 @@ class Gender: UIViewController {
     var currentImage: UIImage!
     var genderText:String!
     @IBOutlet weak var gen: UILabel!
-    
     @IBOutlet weak var cImage: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +26,7 @@ class Gender: UIViewController {
         if((genderText) != ""){
             gen.text=genderText
         }
+        
     }
     
     @IBAction func boyClicked(sender: AnyObject) {

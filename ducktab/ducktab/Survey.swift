@@ -15,8 +15,15 @@ class Survey: UIViewController {
     var cImage: UIImage!
     var cGender: String!
     var cAge:String!
-    @IBOutlet weak var question1Answer: UITextField!
+    var currentLocation:String!
     
+    @IBOutlet weak var question5Answer: UITextField!
+    @IBOutlet weak var question4Answer: UITextField!
+    @IBOutlet weak var question3Answer: UITextField!
+    @IBOutlet weak var question2Answer: UITextField!
+    @IBOutlet weak var question1Answer: UITextField!
+    private var answers: [UITextField] = []
+    private var labels: [UILabel] = []
     @IBOutlet weak var question5: UILabel!
     @IBOutlet weak var question4: UILabel!
     @IBOutlet weak var question3: UILabel!
@@ -28,23 +35,41 @@ class Survey: UIViewController {
     let rootRef = FIRDatabase.database().reference() //root
 
     
+    override func viewWillAppear(animated: Bool) {
+
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         currentImage.image=cImage
-
-        let surveys = rootRef.child("survey questions")
-
-
-        surveys.child("question1").child("subject").observeEventType(.Value) {(snap: FIRDataSnapshot) in
-            self.question1.text = snap.value?.description;
-        }
+        let surveys = rootRef.child(currentLocation)
+        labels.append(question1)
+        labels.append(question2)
+        labels.append(question3)
+        labels.append(question4)
+        labels.append(question5)
+        answers.append(question1Answer)
+        answers.append(question2Answer)
+        answers.append(question3Answer)
+        answers.append(question4Answer)
+        answers.append(question5Answer)
+        
+        surveys.observeSingleEventOfType(.Value, withBlock:  {snapshot in
+            var i = 0;
+            for child in snapshot.children{
+                self.labels[i++].text = child.key! as String
+            }
+        })
     }
+    
+    
+
+    
     @IBAction func question1Submitted(sender: AnyObject) {
         let surveys = rootRef.child("survey questions")
 
         let key = surveys.childByAutoId().key
-        let post = ["uuid": UUIDValue,
-                    "age": cAge,
+        let post = ["age": cAge,
                     "gender":cGender,
                     "answer": question1Answer.text]
         let childUpdates = ["\(key)":post]
@@ -54,6 +79,19 @@ class Survey: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "backToInst") {
+            var i = 0;
+            while i < 5{
+                if (((labels[i].text?.isEmpty)) == false){
+                    let putAnswer = rootRef.child(currentLocation).child(labels[i].text!)
+                    let key = putAnswer.childByAutoId().key
+                    let post = ["age": cAge,
+                                "gender":cGender,
+                                "answer": answers[i].text]
+                    let childUpdates = ["\(key)":post]
+                    putAnswer.updateChildValues(childUpdates)
+                }
+                i = i+1;
+            }
             if let svc = segue.destinationViewController as? QRInstruction{
                 svc.cImage = cImage
                 svc.cGender = cGender

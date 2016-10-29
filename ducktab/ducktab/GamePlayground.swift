@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import FirebaseDatabase
+import Firebase
 
 class GamePlayground: UIViewController {
     
@@ -15,16 +17,54 @@ class GamePlayground: UIViewController {
     var currentGender: String!
     var currentAge:String!
     var currentURL: String!
-
+    var currentLocation: String!{
+        didSet{
+            let key = rootRef.child("current_location").childByAutoId().key
+            let childUpdates = ["\(key)":UUIDValue]
+            rootRef.child("current_location").child(currentLocation!).updateChildValues(childUpdates);
+        }
+    }
+    let rootRef = FIRDatabase.database().reference() //root
     @IBOutlet weak var gameScreen: UIWebView!
+    let UUIDValue = UIDevice.currentDevice().identifierForVendor!.UUIDString //unique identifier for the device
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print (currentURL)
+        let query = rootRef.child("qrcode").queryOrderedByValue().queryEqualToValue(currentURL)
+
+        query.observeSingleEventOfType(.Value, withBlock: { snapshot in
+            for child in snapshot.children {
+                self.currentLocation = (child.key!)
+            }
+        })
+        
+        
+        
+      
+/*
+
+*/
+            /*
+        print (a)
+        qrcodeRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
+                for (_,qr) in allQR {
+                    print(qr);
+                    if(qr.isEqualToString(self.currentURL)){
+                        
+                    }
+                }
+            }            
+            }
+        
+        )
+        */
+        
         let url = NSURL(string: currentURL!)
-        let requestObj = NSURLRequest(URL: url!);
+        let requestObj = NSURLRequest(URL: url!)
         gameScreen.loadRequest(requestObj)
         self.view.addSubview(gameScreen)
-
     }
     
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
@@ -38,6 +78,7 @@ class GamePlayground: UIViewController {
                 svc.cImage = currentImage
                 svc.cGender = currentGender
                 svc.cAge = currentAge
+                svc.currentLocation = currentLocation
             }
         }
         
