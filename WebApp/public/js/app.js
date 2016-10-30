@@ -23,15 +23,15 @@
             console.log(email);
             console.log(pass);
 
-            btnLogin.addEventListener('click', e => {
-                // get email and pass
-                const email = txtEmail.value;
-                const pass = txtPassword.value;
-                const auth = firebase.auth();
-                const promise = auth.signInWithEmailAndPassword(email, pass);
-                promise.catch(e => console.log(e.message));
-
-            });
+            $scope.login = function(){
+              // get email and pass
+              var email = txtEmail.value;
+              var pass = txtPassword.value;
+              var auth = firebase.auth();
+              var promise = auth.signInWithEmailAndPassword(email, pass);
+              promise.catch(function(e){alert(e.message);});
+              $location.path("\home")
+            }
 
             btnSignup.addEventListener('click', e => {
                 const email = txtEmail.value;
@@ -40,18 +40,25 @@
 
                 const promise = auth.createUserWithEmailAndPassword(email, pass);
 
-                promise.catch(e => console.log(e.message));
+                promise.catch(function(e){
+                  alert(e.message);
+                });
+
+                promise.then(function(){
+                  alert("User account created");
+                })
 
             });
 
             firebase.auth().onAuthStateChanged(firebaseUser => {
                 if (firebaseUser) {
                     console.log(firebaseUser);
-                    $location.path( "/home" );
                 } else {
                     console.log("not logged in");
                 }
             });
+
+
         }])
         .controller("HomeCtrl", ['$scope', '$firebaseObject', '$document', '$location', '$q', function ($scope, $firebaseObject, $document, $location, $q) {
 
@@ -59,8 +66,8 @@
           //   firebase.auth().signOut();
           //   $location.path("/");
           // }
-          var rootRef = firebase.database().ref().child("survey questions");
-          $firebaseObject(rootRef).$bindTo($scope, "surveyQuestions");
+          var rootRef = firebase.database().ref().child("questions");
+          $firebaseObject(rootRef).$bindTo($scope, "questionWithLocations");
           var goToQuestionDetail = function(){
             $location.path("/questionDetail");
           };
@@ -68,24 +75,22 @@
               localStorage.setItem("questionToDetail", surveyQuestion);
               goToQuestionDetail();
           }
-          var btnLogout = $document[0].getElementById('btnLogout');
-          btnLogout.addEventListener('click', e => {
-              firebase.auth().signOut();
-              $location.path("/");
-          });
+          $scope.logout = function(){
+            firebase.auth().signOut();
+            $location.path("/");
+          }
         }])
         .controller("QuestionDetailCtrl", ['$scope', '$firebaseObject', '$document', '$location', function ($scope, $firebaseObject, $document, $location) {
           $scope.question = localStorage.getItem("questionToDetail");;
-          var rootRef = firebase.database().ref().child("survey questions")
-          $firebaseObject(rootRef).$bindTo($scope, "questionAnswers");
+          var rootRef = firebase.database().ref().child("questions")
+          $firebaseObject(rootRef).$bindTo($scope, "questions");
           $scope.backToQuestions = function(){
             $location.path('/home');
           }
-          var btnLogout = $document[0].getElementById('btnLogout');
-          btnLogout.addEventListener('click', e => {
-              firebase.auth().signOut();
-              $location.path("/");
-          });
+          $scope.logout = function(){
+            firebase.auth().signOut();
+            $location.path("/");
+          }
 
         }])
         .config(function($routeProvider){

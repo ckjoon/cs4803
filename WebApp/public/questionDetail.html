@@ -5,29 +5,35 @@
       <button id="btnBackToQuestions" class="btn btn-warning pull-right" ng-click="backToQuestions()">
         Back To Questions
       </button>
-      <button id=btnLogout class="btn btn-danger pull-right">
+      <button id=btnLogout ng-click="logout()" class="btn btn-danger pull-right">
         Logout
       </button>
     </div>
   </div>
 </nav>
 
-<div ng-repeat="questionAnswer in questionAnswers" ng-if="questionAnswer.subject == question">
-  <h1 class="question"><b>Question:</b> {{questionAnswer.subject}}</h1>
-   <table class="table">
-     <thead>
-        <tr>
-            <th>Responses</th>
-            <th>Sentiment</th>
-        </tr>
-     </thead>
-     <tbody>
-        <tr ng-repeat = "r in questionAnswer.result">
-            <td>{{r.answer}}</td>
-            <td>60%</td>
-        </tr>
-     </tbody>
-    </table>
-</div>
-
-
+<span ng-repeat="locations in questions">
+  <div ng-repeat="(ques, ans) in locations" ng-if= "ques==question">
+    <h1>{{q}}</h1>
+    <h1>{{a}}</h1>
+    <h1 class="question"><b>Question:</b> {{question}}</h1>
+     <table class="table">
+       <thead>
+          <tr>
+              <th>Responses</th>
+              <th>Sentiment</th>
+              <th>Gender</th>
+              <th>Age</th>
+          </tr>
+       </thead>
+       <tbody>
+          <tr ng-repeat = "a in ans">
+              <td>{{a.answer}}</td>
+              <td>60%</td>
+              <td>{{a.gender}}</td>
+              <td>{{a.age}}</td>
+          </tr>
+       </tbody>
+      </table>
+    </div>
+</span>
