@@ -42,7 +42,7 @@ class Survey: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         currentImage.image=cImage
-        let surveys = rootRef.child(currentLocation)
+        let surveys = rootRef.child("questions").child(currentLocation)
         labels.append(question1)
         labels.append(question2)
         labels.append(question3)
@@ -84,7 +84,7 @@ class Survey: UIViewController {
             var i = 0;
             while i < 5{
                 if (((labels[i].text?.isEmpty)) == false){
-                    let putAnswer = rootRef.child(currentLocation).child(labels[i].text!)
+                    let putAnswer = rootRef.child("questions").child(currentLocation).child(labels[i].text!)
                     let key = putAnswer.childByAutoId().key
                     let post = ["age": cAge,
                                 "gender":cGender,
