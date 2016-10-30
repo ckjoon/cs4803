@@ -12,10 +12,13 @@
     <div class="col-lg-6 right"><h2>Overall Feedback Sentiment</h2><p>68%</p></div>
     <div class="clearfix"></div>
     <div class="row">
-        <div class="rooms col-lg-3 col-md-3 col-sm-6 col-xs-6"><h3>Reception</h3><p>3</p></div>
-        <div class="rooms col-lg-3 col-md-3 col-sm-6 col-xs-6"><h3>Treatment Room</h3><p>4</p></div>
-        <div class="rooms col-lg-3 col-md-3 col-sm-6 col-xs-6"><h3>Sedation Room</h3><p>2</p></div>
-        <div class="rooms col-lg-3 col-md-3 col-sm-6 col-xs-6"><h3>Pharmacy</h3><p>3</p></div>
+        <div ng-repeat = "(locationName, userArray) in currentUserLocations" class="rooms col-lg-3 col-md-3 col-sm-6 col-xs-6">
+          <h3 ng-if="locationName == 'exam_room'">Examination Room</h3>
+          <h3 ng-if="locationName == 'postsedation_room'">Pre Sedation Room</h3>
+          <h3 ng-if="locationName == 'preprocedure_room'">Pre Procedure Room</h3>
+          <h3 ng-if="locationName == 'presedation_room'">Post Sedation Room</h3>
+          <p>{{getLength(userArray)}}</p>
+        </div>
     </div>
 </div>
 

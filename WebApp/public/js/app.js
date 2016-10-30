@@ -66,8 +66,10 @@
           //   firebase.auth().signOut();
           //   $location.path("/");
           // }
-          var rootRef = firebase.database().ref().child("questions");
-          $firebaseObject(rootRef).$bindTo($scope, "questionWithLocations");
+          var rootRefQuestions = firebase.database().ref().child("questions");
+          $firebaseObject(rootRefQuestions).$bindTo($scope, "questionWithLocations");
+          var rootRefCurrentLocation = firebase.database().ref().child("current_location");
+          $firebaseObject(rootRefCurrentLocation).$bindTo($scope, "currentUserLocations");
           var goToQuestionDetail = function(){
             $location.path("/questionDetail");
           };
@@ -78,6 +80,9 @@
           $scope.logout = function(){
             firebase.auth().signOut();
             $location.path("/");
+          }
+          $scope.getLength = function(obj) {
+            return Object.keys(obj).length;
           }
         }])
         .controller("QuestionDetailCtrl", ['$scope', '$firebaseObject', '$document', '$location', function ($scope, $firebaseObject, $document, $location) {
