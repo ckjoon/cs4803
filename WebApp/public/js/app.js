@@ -104,6 +104,9 @@
             }
             rootRefQuestions.child($scope.questionLocation).child($scope.originalQuestion).set({});
             rootRefQuestions.child($scope.questionLocation).child($scope.modifiedQuestion).set({'remove': tempObject});
+            $scope.originalQuestion = '';
+            $scope.modifiedQuestion = '';
+            $scope.questionLocation = '';
           }
 
           $scope.setQuestionToDelete = function(question, location){
@@ -118,8 +121,16 @@
           $scope.newQuestion = '';
           $scope.newQuestionLocation = '';
           $scope.addQuestionToFB = function(){
-
-            rootRefQuestions.child($scope.questionLocation).child($scope.modifiedQuestion).set({'remove': tempObject});
+            if ($scope.newQuestion != null && $scope.newQuestionLocation != null){
+              var tempObject = {
+                gender: 'M',
+                age: '10000',
+                answer: ''
+              }
+              rootRefQuestions.child($scope.newQuestionLocation).child($scope.newQuestion).set({'remove': tempObject});
+              $scope.newQuestion = '';
+              $scope.newQuestionLocation = '';
+            }
           }
 
         }])
