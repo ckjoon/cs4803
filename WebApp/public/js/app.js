@@ -20,8 +20,6 @@
             var datadump = $document[0].getElementById('message');
             var email = txtEmail.value;
             var pass = txtPassword.value;
-            console.log(email);
-            console.log(pass);
 
             $scope.login = function(){
               // get email and pass
@@ -73,17 +71,57 @@
           var goToQuestionDetail = function(){
             $location.path("/questionDetail");
           };
+
           $scope.openDetails = function(surveyQuestion){
               localStorage.setItem("questionToDetail", surveyQuestion);
               goToQuestionDetail();
           }
+
           $scope.logout = function(){
             firebase.auth().signOut();
             $location.path("/");
           }
+
           $scope.getLength = function(obj) {
             return Object.keys(obj).length;
           }
+
+          $scope.setModifyQuestionData = function(question, location){
+            $scope.originalQuestion = question;
+            $scope.modifiedQuestion = question;
+            $scope.questionLocation = location;
+          }
+
+          $scope.updateQuestionInFB = function(){
+            var modifiedQuestion = $scope.modifiedQuestion;
+            var testing = rootRefQuestions.child($scope.questionLocation);
+
+            //TODO: Take care of the tempObject hack
+            var tempObject = {
+              gender: 'M',
+              age: '10000',
+              answer: ''
+            }
+            rootRefQuestions.child($scope.questionLocation).child($scope.originalQuestion).set({});
+            rootRefQuestions.child($scope.questionLocation).child($scope.modifiedQuestion).set({'remove': tempObject});
+          }
+
+          $scope.setQuestionToDelete = function(question, location){
+            $scope.questionToDelete = question;
+            $scope.locationOfQuestionToDelete = location;
+          }
+
+          $scope.deleteQuestionFromFB = function(){
+            rootRefQuestions.child($scope.locationOfQuestionToDelete).child($scope.questionToDelete).set({});
+          }
+
+          $scope.newQuestion = '';
+          $scope.newQuestionLocation = '';
+          $scope.addQuestionToFB = function(){
+
+            rootRefQuestions.child($scope.questionLocation).child($scope.modifiedQuestion).set({'remove': tempObject});
+          }
+
         }])
         .controller("QuestionDetailCtrl", ['$scope', '$firebaseObject', '$document', '$location', function ($scope, $firebaseObject, $document, $location) {
           $scope.question = localStorage.getItem("questionToDetail");;
@@ -96,7 +134,6 @@
             firebase.auth().signOut();
             $location.path("/");
           }
-
         }])
         .config(function($routeProvider){
           $routeProvider

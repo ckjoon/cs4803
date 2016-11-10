@@ -17,7 +17,7 @@
           <h3 ng-if="locationName == 'postsedation_room'">Pre Sedation Room</h3>
           <h3 ng-if="locationName == 'preprocedure_room'">Pre Procedure Room</h3>
           <h3 ng-if="locationName == 'presedation_room'">Post Sedation Room</h3>
-          <p>{{getLength(userArray)}}</p>
+          <p>{{ getLength(userArray) }}</p>
         </div>
     </div>
 </div>
@@ -28,17 +28,91 @@
         <tr>
             <th>Feedback Questions</th>
             <th>Sentiment</th>
-            <th>Detail</th>
+            <th></th>
+            <th>
+              <button data-toggle="modal" data-target="#addNewQuestionModal" class="btn btn-success btn-lg" >Add new question</button>
+            </th>
+            <th></th>
         </tr>
       </thead>
-      <tbody ng-repeat="locations in questionWithLocations">
-            <tr ng-repeat="(question, answer) in locations">
+      <tbody ng-repeat="(location,questions) in questionWithLocations">
+            <tr ng-repeat="(question, answer) in questions">
               <td>{{question}}</td>
               <td>68%</td>
               <td class="no-padding">
                   <button class="btn btn-primary" ng-click="openDetails(question)">Details</button>
               </td>
+              <td class="no-padding">
+                  <button class="btn btn-warning" data-toggle="modal" data-target="#modifyModal" ng-click="setModifyQuestionData(question, location)">Modify</button>
+              </td>
+              <td class="no-padding">
+                  <button class="btn btn-danger" data-toggle="modal" data-target="#deleteModal"  ng-click="setQuestionToDelete(question, location)">Delete</button>
+              </td>
           </tr>
       </tbody>
     </table>
+</div>
+
+<!-- Modify Modal -->
+<div class="modal fade" id="modifyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modify Question</h4>
+      </div>
+      <div class="modal-body">
+        <input ng-model="modifiedQuestion" class="form-control" value="{{modifiedQuestion}}"/>
+        <br/>
+        <h4>
+          <span class= "label label-danger">NOTE:</span>
+          Modifying the question will remove all the past answers
+        </h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" ng-click="updateQuestionInFB()" data-dismiss="modal">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Delete Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Delete Question</h4>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to permanently delete the question and answers?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" ng-click="deleteQuestionFromFB()" data-dismiss="modal">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add New Question Modal -->
+<div class="modal fade" id="addNewQuestionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add New Question</h4>
+      </div>
+      <div class="modal-body">
+        <input ng-model="newQuestion" class="form-control"/ placeholder="Question" />
+        <br />
+        <input ng-model="newQuestionLocation" class="form-control" placeholder="Which room to ask question in?" />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success" ng-click="addQuestionToFB()" data-dismiss="modal">Create</button>
+      </div>
+    </div>
+  </div>
 </div>
