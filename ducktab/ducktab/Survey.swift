@@ -17,11 +17,6 @@ class Survey: UIViewController {
     var cAge:String!
     var currentLocation:String!
     
-    @IBOutlet weak var question5Answer: UITextField!
-    @IBOutlet weak var question4Answer: UITextField!
-    @IBOutlet weak var question3Answer: UITextField!
-    @IBOutlet weak var question2Answer: UITextField!
-    @IBOutlet weak var question1Answer: UITextField!
     private var answers: [UITextField] = []
     private var labels: [UILabel] = []
     @IBOutlet weak var question5: UILabel!
@@ -48,11 +43,6 @@ class Survey: UIViewController {
         labels.append(question3)
         labels.append(question4)
         labels.append(question5)
-        answers.append(question1Answer)
-        answers.append(question2Answer)
-        answers.append(question3Answer)
-        answers.append(question4Answer)
-        answers.append(question5Answer)
         
         surveys.observeSingleEventOfType(.Value, withBlock:  {snapshot in
             var i = 0;
@@ -73,7 +63,7 @@ class Survey: UIViewController {
         let key = surveys.childByAutoId().key
         let post = ["age": cAge,
                     "gender":cGender,
-                    "answer": question1Answer.text]
+                    "answer": "k"]
         let childUpdates = ["\(key)":post]
         surveys.child("question1").child("result").updateChildValues(childUpdates);
     }
