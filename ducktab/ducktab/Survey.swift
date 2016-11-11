@@ -17,13 +17,18 @@ class Survey: UIViewController {
     var cAge:String!
     var currentLocation:String!
     
+    @IBOutlet weak var question2: UILabel!
+    @IBOutlet weak var answer4: UITextField!
+    @IBOutlet weak var answer3: UITextField!
+    @IBOutlet weak var answer2: UITextField!
+    @IBOutlet weak var answer5: UITextField!
+    @IBOutlet weak var answer1: UITextField!
     private var answers: [UITextField] = []
     private var labels: [UILabel] = []
     @IBOutlet weak var question5: UILabel!
     @IBOutlet weak var question4: UILabel!
-    @IBOutlet weak var question3: UILabel!
-    @IBOutlet weak var question2: UILabel!
     @IBOutlet weak var question1: UILabel!
+    @IBOutlet weak var question3: UILabel!
     let UUIDValue = UIDevice.currentDevice().identifierForVendor!.UUIDString //unique identifier for the device
 
     @IBOutlet weak var currentImage: UIImageView!
@@ -44,6 +49,12 @@ class Survey: UIViewController {
         labels.append(question4)
         labels.append(question5)
         
+        answers.append(answer1)
+        answers.append(answer2)
+        answers.append(answer3)
+        answers.append(answer4)
+        answers.append(answer5)
+        
         surveys.observeSingleEventOfType(.Value, withBlock:  {snapshot in
             var i = 0;
             for child in snapshot.children{
@@ -56,17 +67,6 @@ class Survey: UIViewController {
     
     
 
-    
-    @IBAction func question1Submitted(sender: AnyObject) {
-        let surveys = rootRef.child("survey questions")
-
-        let key = surveys.childByAutoId().key
-        let post = ["age": cAge,
-                    "gender":cGender,
-                    "answer": "k"]
-        let childUpdates = ["\(key)":post]
-        surveys.child("question1").child("result").updateChildValues(childUpdates);
-    }
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
