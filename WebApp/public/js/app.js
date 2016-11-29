@@ -94,8 +94,6 @@
 
           $scope.updateQuestionInFB = function(){
             var modifiedQuestion = $scope.modifiedQuestion;
-            var testing = rootRefQuestions.child($scope.questionLocation);
-
             //TODO: Take care of the tempObject hack
             var tempObject = {
               gender: 'M',
@@ -130,6 +128,21 @@
               rootRefQuestions.child($scope.newQuestionLocation).child($scope.newQuestion).set({'remove': tempObject});
               $scope.newQuestion = '';
               $scope.newQuestionLocation = '';
+            }
+          }
+
+          $scope.newQRCode= '';
+          $scope.newQRCodeLocation = '';
+          $scope.addQRCodeToFB = function(){
+            if ($scope.newQRCode != null && $scope.newQRCodeLocation != null){
+              var rootRefQRCodes = firebase.database().ref().child("qrcode");
+              var newQRCode = $scope.newQRCode;
+              var newQRCodeLocation = $scope.newQRCodeLocation;
+              var tempObject = {};
+              tempObject[newQRCodeLocation] = newQRCode;
+              rootRefQRCodes.push(tempObject);
+              $scope.newQRCode = '';
+              $scope.newQRCodeLocation = '';
             }
           }
 

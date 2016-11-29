@@ -28,11 +28,12 @@
         <tr>
             <th>Feedback Questions</th>
             <th>Sentiment</th>
-            <th></th>
             <th>
-              <button data-toggle="modal" data-target="#addNewQuestionModal" class="btn btn-success btn-lg" >Add new question</button>
+              <button data-toggle="modal" data-target="#addNewQuestionModal" class="btn btn-success btn-lg">Add new question</button>
             </th>
-            <th></th>
+            <th>
+              <button data-toggle="modal" data-target="#addNewQrCode" class="btn btn-success btn-lg">Add new QR code</button>
+            </th>
         </tr>
       </thead>
       <tbody ng-repeat="(location,questions) in questionWithLocations">
@@ -112,6 +113,27 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-success" ng-click="addQuestionToFB()" data-dismiss="modal">Create</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add New Question Modal -->
+<div class="modal fade" id="addNewQrCode" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add New QR Code</h4>
+      </div>
+      <div class="modal-body">
+        <input ng-model="newQRCode" class="form-control"/ placeholder="URL of QR Code" />
+        <br />
+        <input ng-model="newQRCodeLocation" class="form-control" placeholder="Which room to place QR code in?" />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success" ng-click="addQRCodeToFB()" data-dismiss="modal">Create</button>
       </div>
     </div>
   </div>
