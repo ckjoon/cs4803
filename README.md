@@ -2,7 +2,7 @@
 
 Ducktab is an iPad application that patients can interact with in order to make wait time more worth.
 
-### Requirements
+### Prerequisites
 
 #### Hardware
 In order to develop ducktab application you would need:
@@ -56,6 +56,18 @@ $ open ducktab.xcworkspace/
 5. Add your account to the sign in
 ![ScreenShot](Screenshots/signin.jpeg)
 
+
+### Running the Application
+Click the run icon at the top to deploy your application
+![ScreenShot](Screenshots/run.jpeg)
+
+### References for iOS developers Regarding Firebase
+
+The core part of this application relies heavily on interacting with Firebase Realtime Database
+References regarding these material is available here:
+
+*[Firebase iOS Realtime Database Guides] (https://firebase.google.com/docs/database)
+*[Firebase iOS API Reference Documentation] (https://firebase.google.com/docs/reference/ios/firebasecore/api/reference/Classes)
 
 
 
