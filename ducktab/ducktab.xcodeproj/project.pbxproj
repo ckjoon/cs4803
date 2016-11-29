@@ -257,6 +257,7 @@
 				TargetAttributes = {
 					D2A5E2341DB5B395009070EE = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = JAEK7PRRU8;
 					};
 					D2A5E24B1DB5B395009070EE = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -609,6 +610,7 @@
 			baseConfigurationReference = F2FBD78D68CB480CB4B221A7 /* Pods-ducktab.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JAEK7PRRU8;
 				INFOPLIST_FILE = ducktab/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.gatech.ducktab;
@@ -621,6 +623,7 @@
 			baseConfigurationReference = 6B7FCB47302D00E2ED3B309A /* Pods-ducktab.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JAEK7PRRU8;
 				INFOPLIST_FILE = ducktab/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.gatech.ducktab;
