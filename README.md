@@ -46,12 +46,12 @@ $ open ducktab.xcworkspace/
 
 ### Application 
 1. Xcode will ask you to convert to the latest Swift. The application is developed with Swift 2.3 Convert at your own risk
-![ScreenShot](Screenshots/convert.jpg)
+![ScreenShot](Screenshots/convert.jpeg)
 2. Sign in with your team / individual apple account
-![ScreenShot](Screenshots/preference.jpg)
-![ScreenShot](Screenshots/appleid.jpg)
-![ScreenShot](Screenshots/screen.jpg)
-![ScreenShot](Screenshots/Signin.jpg)
+![ScreenShot](Screenshots/preference.jpeg)
+![ScreenShot](Screenshots/appleid.jpeg)
+![ScreenShot](Screenshots/screen.jpeg)
+![ScreenShot](Screenshots/Signin.jpeg)
 
 
 
