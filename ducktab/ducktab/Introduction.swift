@@ -13,7 +13,6 @@ class Introduction: UIViewController {
     
     var cImage:UIImage!
     @IBOutlet weak var currentImage: UIImageView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         currentImage.image = UIImage(named:"meowth_icon")
@@ -64,7 +63,5 @@ class Introduction: UIViewController {
 
     }
     
-    
-
 }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kby-pU-UJ8">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,6 +9,212 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Terms-->
+        <scene sceneID="qbt-Sd-MOJ">
+            <objects>
+                <viewController id="kby-pU-UJ8" customClass="Terms" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nNQ-bq-BCu"/>
+                        <viewControllerLayoutGuide type="bottom" id="OQZ-9y-z1U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WNe-zR-vpZ">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="DdK-ZK-Lcw">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pt7-30-KbW">
+                                <rect key="frame" x="187.5" y="908" width="170" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="decline"/>
+                                <connections>
+                                    <action selector="declineButton:" destination="kby-pU-UJ8" eventType="touchUpInside" id="e3H-0r-7n6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UuD-hr-AR4">
+                                <rect key="frame" x="429.5" y="903" width="173" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Accept Terms &amp; Conditions"/>
+                                <state key="normal" image="accept"/>
+                                <connections>
+                                    <action selector="acceptButton:" destination="kby-pU-UJ8" eventType="touchUpInside" id="slf-e0-5H7"/>
+                                    <segue destination="nZM-LQ-gVG" kind="show" identifier="toTestSelection" id="m4W-HQ-Q67"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="C0P-yZ-RNu">
+                                <rect key="frame" x="115" y="32" width="551" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rect_white" translatesAutoresizingMaskIntoConstraints="NO" id="93O-Jb-RVS">
+                                <rect key="frame" x="56" y="160.5" width="656" height="660.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="text_accept_terms" translatesAutoresizingMaskIntoConstraints="NO" id="TY6-pL-sVl">
+                                <rect key="frame" x="135" y="848.5" width="499" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T5E-vV-9LH">
+                                <rect key="frame" x="90" y="232" width="566" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Study Title:">
+                                        <attributes>
+                                            <font key="NSFont" size="18" name="AppleSDGothicNeo-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" Designing Cancer Care for Kids (DuckTab)">
+                                        <attributes>
+                                            <font key="NSFont" size="18" name="AppleSDGothicNeo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Terms &amp; Conditions" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uKN-V4-upW">
+                                <rect key="frame" x="100" y="177" width="566" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ac-ov-yHT">
+                                <rect key="frame" x="91" y="261" width="566" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Principle Investigator: ">
+                                        <attributes>
+                                            <font key="NSFont" size="18" name="AppleSDGothicNeo-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Karen Wasilewski-Masker, MD">
+                                        <attributes>
+                                            <font key="NSFont" size="18" name="AppleSDGothicNeo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="interactive" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="hqA-Ei-d1O">
+                                <rect key="frame" x="93" y="312" width="582" height="470"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <mutableString key="text">If this form is being read by the parent or legal guardian, the term “you” refers to “your child.” We are asking you to volunteer to take part in a survey as part of a research study about your feelings and experience during your clinic visit to the Aflac Cancer &amp; Blood Disorders Center.
+
+This survey is being conducted to determine what we can do to improve the experience of patients in our clinic by looking at timepoints in the clinic visit, asking about feelings in different areas of clinic, and asking for opportunities for improvement. The survey will consist of questions pertaining to feelings, wait-times and what is good and can be made better in clinic. The survey will take approximately 20-30 minutes of your time throughout the clinic visit. Your participation in this survey is completely voluntary. This means you do not have to participate if you don’t want to. 
+
+If you agree to participate, you have the right to only answer the questions you choose to answer. The potential risks of this research are minimal and confidentiality of private health information that you share with us will be maintained to the highest level. You have the right to stop participation at any point during the survey if you so choose. We expect to enroll 100-200 participants in this study. 
+
+If you have questions or concerns regarding this research, you can contact the PI, Dr. Karen Wasilewski-Masker, at 404-785-3240 or the Children’s Healthcare of Atlanta IRB, the committee that works to protect your rights and welfare at the Aflac Cancer &amp; Blood Disorders Center. If you would like to participate- please accept the terms and continue with completing this online survey. Personal Health Information (PHI) will not be collected as part of this study. Please be sure you return the research tablet at the end of the visit to the front desk.</mutableString>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="investigator" destination="5Ac-ov-yHT" id="YJP-28-jSh"/>
+                        <outlet property="studyTitle" destination="T5E-vV-9LH" id="K1d-G1-RgE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wim-Y5-FuC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1873" y="136"/>
+        </scene>
+        <!--Treatment-->
+        <scene sceneID="V0E-Hx-AHr">
+            <objects>
+                <viewController id="nZM-LQ-gVG" customClass="Treatment" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pNy-tX-iX0"/>
+                        <viewControllerLayoutGuide type="bottom" id="qXL-Ic-dgy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HZS-EQ-qEA">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Epk-kY-iqn">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="lGS-TZ-4Nn">
+                                <rect key="frame" x="115" y="32" width="551" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="usedAppText" translatesAutoresizingMaskIntoConstraints="NO" id="oHa-Fq-g7t">
+                                <rect key="frame" x="137.5" y="208" width="493.5" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZiS-05-Zjo">
+                                <rect key="frame" x="229" y="280" width="138.5" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="no"/>
+                                <connections>
+                                    <action selector="noButton:" destination="nZM-LQ-gVG" eventType="touchUpInside" id="m6j-SA-TDQ"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="noToChar" id="d2V-4j-Cw6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nj7-Ac-tks">
+                                <rect key="frame" x="401" y="280" width="138.5" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="yes"/>
+                                <connections>
+                                    <action selector="yesButton:" destination="nZM-LQ-gVG" eventType="touchUpInside" id="Rni-9I-5Cc"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="yesToChar" id="xF4-un-J1p"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hereForText" translatesAutoresizingMaskIntoConstraints="NO" id="aGd-Ze-zgE">
+                                <rect key="frame" x="206" y="443" width="356" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EO6-vL-86f">
+                                <rect key="frame" x="109" y="509" width="275" height="275"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="hem"/>
+                                <connections>
+                                    <action selector="hemButton:" destination="nZM-LQ-gVG" eventType="touchUpInside" id="XlE-1Q-Vdp"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="hemToChar" id="Vfz-ZN-RTb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s98-yh-7cL">
+                                <rect key="frame" x="405" y="509" width="275" height="275"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="onco"/>
+                                <connections>
+                                    <action selector="oncoButton:" destination="nZM-LQ-gVG" eventType="touchUpInside" id="0N3-tf-ROx"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="oncoToChar" id="Vdg-DN-N1z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gs-sA-IOI">
+                                <rect key="frame" x="110" y="815.5" width="568.5" height="75.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="noSure"/>
+                                <connections>
+                                    <action selector="notSureButton:" destination="nZM-LQ-gVG" eventType="touchUpInside" id="Vkf-ba-830"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="noSureToChar" id="GnB-cC-6gg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="hemButton" destination="EO6-vL-86f" id="NHT-An-qvl"/>
+                        <outlet property="noButton" destination="ZiS-05-Zjo" id="hhm-xU-auX"/>
+                        <outlet property="notSureButton" destination="8Gs-sA-IOI" id="0f8-I6-78d"/>
+                        <outlet property="oncoButton" destination="s98-yh-7cL" id="xut-ZC-NSr"/>
+                        <outlet property="yesButton" destination="Nj7-Ac-tks" id="w2V-B4-Gyf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V6A-dn-Qix" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1056.25" y="135.9375"/>
+        </scene>
         <!--Introduction-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -960,6 +1166,7 @@
         <image name="Red" width="53" height="332"/>
         <image name="Title" width="1093" height="202"/>
         <image name="Yellow" width="53" height="332"/>
+        <image name="accept" width="169" height="73"/>
         <image name="background" width="1536" height="2048"/>
         <image name="box" width="689" height="337"/>
         <image name="button10" width="240" height="240"/>
@@ -976,19 +1183,30 @@
         <image name="charmander" width="380" height="374"/>
         <image name="chooseAge" width="801" height="138"/>
         <image name="chooseRec" width="1392" height="904"/>
+        <image name="decline" width="169" height="73"/>
         <image name="dratini" width="380" height="374"/>
         <image name="draw_your_own" width="380" height="374"/>
         <image name="goingtoanotherroom" width="459" height="193"/>
         <image name="gotoanotherroom" width="1047" height="241"/>
+        <image name="hem" width="570" height="570"/>
+        <image name="hereForText" width="715" height="58"/>
         <image name="meowth" width="380" height="374"/>
+        <image name="no" width="275" height="120"/>
+        <image name="noSure" width="1157" height="171"/>
+        <image name="onco" width="570" height="570"/>
         <image name="previewRec" width="1392" height="435"/>
         <image name="questionbox" width="1392" height="1099"/>
+        <image name="rect_white" width="666" height="670"/>
         <image name="scan" width="1104" height="1104"/>
         <image name="snorlax" width="380" height="373"/>
+        <image name="text_accept_terms" width="498" height="28"/>
+        <image name="usedAppText" width="988" height="58"/>
+        <image name="yes" width="275" height="120"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Kgo-PK-pHU"/>
+        <segue reference="GnB-cC-6gg"/>
         <segue reference="BJ3-Du-MTN"/>
         <segue reference="9Ib-Hx-Jii"/>
+        <segue reference="Kgo-PK-pHU"/>
     </inferredMetricsTieBreakers>
 </document>

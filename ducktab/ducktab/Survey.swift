@@ -98,9 +98,5 @@ class Survey: UIViewController {
                 svc.cAge = cAge
             }
         }
-        
     }
-    
-    
-
 }

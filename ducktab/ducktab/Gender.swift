@@ -48,7 +48,6 @@ class Gender: UIViewController {
         if (segue.identifier == "toIntroduction") {
             if let svc = segue.destinationViewController as? Introduction{
                 svc.cImage = currentImage
-                
             }
         }
         

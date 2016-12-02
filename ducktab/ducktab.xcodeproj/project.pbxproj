@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BAB57375D939CC75DA77B42 /* Pods_ducktabTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A02157DA644B521821265B /* Pods_ducktabTests.framework */; };
+		5D87C0A91DF144D8000DB5B1 /* Terms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D87C0A81DF144D8000DB5B1 /* Terms.swift */; };
+		5D87C0AB1DF15DDC000DB5B1 /* Treatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D87C0AA1DF15DDC000DB5B1 /* Treatment.swift */; };
+		8EF392E04749D5A1C0B34806 /* Pods_ducktab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB16E4E519E8469D020A0B12 /* Pods_ducktab.framework */; };
+		922877F1139849DC389A958C /* Pods_ducktabUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96071735A9D0C0800BFA1C4B /* Pods_ducktabUITests.framework */; };
 		D20B5A941DB6F3F200F692AD /* QRcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20B5A931DB6F3F200F692AD /* QRcode.swift */; };
 		D24648681DC3DBCF0097AF5B /* QRInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24648671DC3DBCF0097AF5B /* QRInstruction.swift */; };
 		D254B1031DB5D435006569AA /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254B1021DB5D435006569AA /* Gender.swift */; };
@@ -43,10 +48,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02A02157DA644B521821265B /* Pods_ducktabTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ducktabTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33D95F14C35993E71F305E65 /* Pods-ducktabUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ducktabUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ducktabUITests/Pods-ducktabUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4E1F023619EA94029E1ACE0B /* Pods-ducktabTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ducktabTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ducktabTests/Pods-ducktabTests.release.xcconfig"; sourceTree = "<group>"; };
+		5D87C0A81DF144D8000DB5B1 /* Terms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Terms.swift; sourceTree = "<group>"; };
+		5D87C0AA1DF15DDC000DB5B1 /* Treatment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Treatment.swift; sourceTree = "<group>"; };
 		5FE1D1EFA78274DB9016B2A4 /* Pods-ducktabUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ducktabUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ducktabUITests/Pods-ducktabUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6B7FCB47302D00E2ED3B309A /* Pods-ducktab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ducktab.release.xcconfig"; path = "Pods/Target Support Files/Pods-ducktab/Pods-ducktab.release.xcconfig"; sourceTree = "<group>"; };
+		96071735A9D0C0800BFA1C4B /* Pods_ducktabUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ducktabUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D20B5A931DB6F3F200F692AD /* QRcode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRcode.swift; sourceTree = "<group>"; };
 		D24648671DC3DBCF0097AF5B /* QRInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRInstruction.swift; sourceTree = "<group>"; };
 		D254B1021DB5D435006569AA /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
@@ -70,6 +79,7 @@
 		D2A5E25D1DB5B395009070EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2A5E26B1DB5B3FF009070EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E56B5D360D27835A92835096 /* Pods-ducktabTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ducktabTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ducktabTests/Pods-ducktabTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EB16E4E519E8469D020A0B12 /* Pods_ducktab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ducktab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2FBD78D68CB480CB4B221A7 /* Pods-ducktab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ducktab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ducktab/Pods-ducktab.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EF392E04749D5A1C0B34806 /* Pods_ducktab.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BAB57375D939CC75DA77B42 /* Pods_ducktabTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				922877F1139849DC389A958C /* Pods_ducktabUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +114,9 @@
 		2D0862ABB45F6ECA4B2FF73E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB16E4E519E8469D020A0B12 /* Pods_ducktab.framework */,
+				02A02157DA644B521821265B /* Pods_ducktabTests.framework */,
+				96071735A9D0C0800BFA1C4B /* Pods_ducktabUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -158,6 +174,8 @@
 				D254B1061DB5E56B006569AA /* Survey.swift */,
 				D29CFCA31DB714AB00B3CD65 /* GamePlayground.swift */,
 				D28AD2601DB85FEC00B9284A /* DrawOwn.swift */,
+				5D87C0A81DF144D8000DB5B1 /* Terms.swift */,
+				5D87C0AA1DF15DDC000DB5B1 /* Treatment.swift */,
 			);
 			path = ducktab;
 			sourceTree = "<group>";
@@ -331,7 +349,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		3831DA30FD620A83761D900B /* [CP] Embed Pods Frameworks */ = {
@@ -406,7 +424,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		F15B47FAE4D5876EC8790403 /* [CP] Copy Pods Resources */ = {
@@ -451,7 +469,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -463,6 +481,7 @@
 			files = (
 				D254B1031DB5D435006569AA /* Gender.swift in Sources */,
 				D2A5E23B1DB5B395009070EE /* Introduction.swift in Sources */,
+				5D87C0AB1DF15DDC000DB5B1 /* Treatment.swift in Sources */,
 				D2A5E2411DB5B395009070EE /* ducktab.xcdatamodeld in Sources */,
 				D254B1071DB5E56B006569AA /* Survey.swift in Sources */,
 				D254B1051DB5DE24006569AA /* Age.swift in Sources */,
@@ -470,6 +489,7 @@
 				D29CFCA41DB714AB00B3CD65 /* GamePlayground.swift in Sources */,
 				D20B5A941DB6F3F200F692AD /* QRcode.swift in Sources */,
 				D28AD2611DB85FEC00B9284A /* DrawOwn.swift in Sources */,
+				5D87C0A91DF144D8000DB5B1 /* Terms.swift in Sources */,
 				D24648681DC3DBCF0097AF5B /* QRInstruction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
