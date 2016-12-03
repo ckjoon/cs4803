@@ -11,6 +11,10 @@ import UIKit
 
 class Terms: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "toTestSelection"){
             //Do nothing
