@@ -105,23 +105,19 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="interactive" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="hqA-Ei-d1O">
                                 <rect key="frame" x="93" y="312" width="582" height="470"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <mutableString key="text">If this form is being read by the parent or legal guardian, the term “you” refers to “your child.” We are asking you to volunteer to take part in a survey as part of a research study about your feelings and experience during your clinic visit to the Aflac Cancer &amp; Blood Disorders Center.
+                                <string key="text">If this form is being read by the parent or legal guardian, the term “you” refers to “your child.” We are asking you to volunteer to take part in a survey as part of a research study about your feelings and experience during your clinic visit to the Aflac Cancer &amp; Blood Disorders Center.
 
 This survey is being conducted to determine what we can do to improve the experience of patients in our clinic by looking at timepoints in the clinic visit, asking about feelings in different areas of clinic, and asking for opportunities for improvement. The survey will consist of questions pertaining to feelings, wait-times and what is good and can be made better in clinic. The survey will take approximately 20-30 minutes of your time throughout the clinic visit. Your participation in this survey is completely voluntary. This means you do not have to participate if you don’t want to. 
 
 If you agree to participate, you have the right to only answer the questions you choose to answer. The potential risks of this research are minimal and confidentiality of private health information that you share with us will be maintained to the highest level. You have the right to stop participation at any point during the survey if you so choose. We expect to enroll 100-200 participants in this study. 
 
-If you have questions or concerns regarding this research, you can contact the PI, Dr. Karen Wasilewski-Masker, at 404-785-3240 or the Children’s Healthcare of Atlanta IRB, the committee that works to protect your rights and welfare at the Aflac Cancer &amp; Blood Disorders Center. If you would like to participate- please accept the terms and continue with completing this online survey. Personal Health Information (PHI) will not be collected as part of this study. Please be sure you return the research tablet at the end of the visit to the front desk.</mutableString>
+If you have questions or concerns regarding this research, you can contact the PI, Dr. Karen Wasilewski-Masker, at 404-785-3240 or the Children’s Healthcare of Atlanta IRB, the committee that works to protect your rights and welfare at the Aflac Cancer &amp; Blood Disorders Center. If you would like to participate- please accept the terms and continue with completing this online survey. Personal Health Information (PHI) will not be collected as part of this study. Please be sure you return the research tablet at the end of the visit to the front desk.</string>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outlet property="investigator" destination="5Ac-ov-yHT" id="YJP-28-jSh"/>
-                        <outlet property="studyTitle" destination="T5E-vV-9LH" id="K1d-G1-RgE"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wim-Y5-FuC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
