@@ -34,12 +34,11 @@ class Survey: UIViewController {
     let UUIDValue = UIDevice.currentDevice().identifierForVendor!.UUIDString //unique identifier for the device
 
     @IBOutlet weak var currentImage: UIImageView!
+    
     let rootRef = FIRDatabase.database().reference() //root
-
     
     override func viewWillAppear(animated: Bool) {
 
-        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,6 +79,8 @@ class Survey: UIViewController {
                     let key = putAnswer.childByAutoId().key
                     let post = ["age": cAge,
                                 "gender":cGender,
+//                                "treatmentType": treatmentType,
+//                                "appUsed": usedApp,
                                 "answer": answers[i].text]
                     let childUpdates = ["\(key)":post]
                     putAnswer.updateChildValues(childUpdates)
