@@ -17,6 +17,7 @@ class Survey: UIViewController {
     var cAge:String!
     var currentLocation:String!
     var treatmentType:String!
+    var usedApp:String!
     
     @IBOutlet weak var question2: UILabel!
     @IBOutlet weak var answer4: UITextField!
@@ -98,6 +99,7 @@ class Survey: UIViewController {
                 svc.cGender = cGender
                 svc.cAge = cAge
                 svc.treatmentType = treatmentType
+                svc.usedApp = usedApp
             }
         }
     }

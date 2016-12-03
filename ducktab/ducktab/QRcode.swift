@@ -18,6 +18,7 @@ class QRcode: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     var currentGender: String!
     var currentAge:String!
     var treatmentType:String!
+    var usedApp:String!
     
     @IBOutlet weak var messageLabel: UILabel!
     
@@ -117,6 +118,7 @@ class QRcode: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
                 svc.currentAge = currentAge;
                 svc.currentURL = messageLabel.text
                 svc.treatmentType = treatmentType
+                svc.usedApp = usedApp
             }
         }
         

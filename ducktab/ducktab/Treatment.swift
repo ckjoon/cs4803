@@ -6,59 +6,106 @@
 //  Copyright © 2016 gatech.edu. All rights reserved.
 //
 
-import Foundation
 import UIKit
-import Firebase
 
 class Treatment: UIViewController {
-    
+
     var treatmentType:String!
-    @IBOutlet weak var selectTreatment: UIImageView!
-    @IBOutlet weak var selectTreatment2: UIImageView!
+    var usedApp:String!
     
+    @IBOutlet weak var AppUsed: UILabel!
+    @IBOutlet weak var treatText: UILabel!
+    @IBOutlet weak var selectTreat1: UIImageView!
+    @IBOutlet weak var selectTreat2: UIImageView!
+    @IBOutlet weak var selectYesNo: UIImageView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        selectTreatment.hidden = true
-        selectTreatment2.hidden = true
+
+        // Do any additional setup after loading the view.
+        
+        selectTreat1.image = UIImage(named: "hemoncoSelect")
+        selectTreat2.image = UIImage (named: "notSureSelect")
+        selectYesNo.image = UIImage (named: "yesnoSelect")
+        
+        selectTreat1.frame.origin.x = 109
+        selectTreat1.frame.origin.y = 509
+        
+        selectTreat2.frame.origin.x = 274
+        selectTreat2.frame.origin.y = 789
+        
+        selectYesNo.frame.origin.x = 110
+        selectYesNo.frame.origin.y = 815.5
+        
+        selectTreat1.hidden = true
+        selectTreat2.hidden = true
+        selectYesNo.hidden = true
+        
+        treatmentType = "Not_Sure"
+        usedApp = "No"
     }
 
-    @IBAction func hemClicked(sender: AnyObject) {
-        selectTreatment.frame.origin.x = 109
-        selectTreatment.frame.origin.y = 509
-        selectTreatment.hidden = false
-        selectTreatment2.hidden = true
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func noClicked(sender: AnyObject) {
         
-        // set data for firebase
+        selectYesNo.frame.origin.x = 229
+        selectYesNo.frame.origin.y = 280
+        selectYesNo.hidden = false
+        usedApp = "No"
+        AppUsed.text = usedApp
+    }
+    
+    @IBAction func yesClicked(sender: AnyObject) {
+        
+        selectYesNo.frame.origin.x = 401
+        selectYesNo.frame.origin.y = 280
+        selectYesNo.hidden = false
+        usedApp = "Yes"
+        AppUsed.text = usedApp
+    }
+    
+    @IBAction func hemClicked(sender: AnyObject) {
+        
+        selectTreat1.frame.origin.x = 109
+        selectTreat1.frame.origin.y = 509
+        selectTreat1.hidden = false
+        selectTreat2.hidden = true
         treatmentType = "Hematology"
+        treatText.text = treatmentType
     }
     
     @IBAction func oncoClicked(sender: AnyObject) {
-        selectTreatment.frame.origin.x = 405
-        selectTreatment.frame.origin.y = 509
-        selectTreatment.hidden = false
-        selectTreatment2.hidden = true
-        
-        // set data for firebase
+        selectTreat1.frame.origin.x = 405
+        selectTreat1.frame.origin.y = 509
+        selectTreat1.hidden = false
+        selectTreat2.hidden = true
         treatmentType = "Oncology"
+        treatText.text = treatmentType
     }
     
     @IBAction func notSureClicked(sender: AnyObject) {
-        selectTreatment2.frame.origin.x = 110
-        selectTreatment2.frame.origin.y = 815.5
-        selectTreatment2.hidden = false
-        selectTreatment.hidden = true
-        
-        // set data for firebase
-        treatmentType = "Not_Sure"
-    }
     
+            selectTreat2.frame.origin.x = 110
+            selectTreat2.frame.origin.y = 815.5
+            selectTreat1.hidden = true
+            selectTreat2.hidden = false
+            treatmentType = "Not_Sure"
+            treatText.text = treatmentType
+    }
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "toCharacter"){
-              //Send Data for Firebase
+        if (segue.identifier == "toCharacter") {
             if let svc = segue.destinationViewController as? Introduction{
                 svc.treatmentType = treatmentType
+                svc.usedApp = usedApp
             }
         }
-    }
-}
 
+    }
+
+
+}

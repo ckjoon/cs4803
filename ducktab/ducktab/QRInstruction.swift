@@ -14,6 +14,7 @@ class QRInstruction: UIViewController {
     var cGender: String!
     var cAge:String!
     var treatmentType:String!
+    var usedApp:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,7 @@ class QRInstruction: UIViewController {
                 svc.currentGender = cGender
                 svc.currentAge = cAge
                 svc.treatmentType = treatmentType
+                svc.usedApp = usedApp
             }
         }
         
@@ -34,6 +36,7 @@ class QRInstruction: UIViewController {
                 svc.currentImage = cImage
                 svc.currentGender = cGender
                 svc.treatmentType = treatmentType
+                svc.usedApp = usedApp
             }
         }
         
