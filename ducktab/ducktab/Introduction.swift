@@ -20,12 +20,12 @@ class Introduction: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        selectedChar.hidden = true
+        selectedChar.image = UIImage(named: "charSelect")
+        
         currentImage.image = UIImage(named:"meowth_icon")
         if((cImage) != nil){
             currentImage.image=cImage
-            
-        selectedChar.hidden = true
-        selectedChar.image = UIImage(named: "charSelect")
         }
         
         // Do any additional setup after loading the view, typically from a nib.
