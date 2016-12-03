@@ -29,9 +29,6 @@
                                 <rect key="frame" x="187.5" y="908" width="170" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="decline"/>
-                                <connections>
-                                    <action selector="declineButton:" destination="kby-pU-UJ8" eventType="touchUpInside" id="e3H-0r-7n6"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UuD-hr-AR4">
                                 <rect key="frame" x="429.5" y="903" width="173" height="81"/>
@@ -39,8 +36,7 @@
                                 <accessibility key="accessibilityConfiguration" label="Accept Terms &amp; Conditions"/>
                                 <state key="normal" image="accept"/>
                                 <connections>
-                                    <action selector="acceptButton:" destination="kby-pU-UJ8" eventType="touchUpInside" id="slf-e0-5H7"/>
-                                    <segue destination="nZM-LQ-gVG" kind="show" identifier="toTestSelection" id="m4W-HQ-Q67"/>
+                                    <segue destination="nZM-LQ-gVG" kind="show" id="hE8-gO-ZTw"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="C0P-yZ-RNu">
@@ -102,26 +98,22 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="interactive" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="hqA-Ei-d1O">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="interactive" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="hqA-Ei-d1O">
                                 <rect key="frame" x="93" y="312" width="582" height="470"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <mutableString key="text">If this form is being read by the parent or legal guardian, the term “you” refers to “your child.” We are asking you to volunteer to take part in a survey as part of a research study about your feelings and experience during your clinic visit to the Aflac Cancer &amp; Blood Disorders Center.
+                                <string key="text">If this form is being read by the parent or legal guardian, the term “you” refers to “your child.” We are asking you to volunteer to take part in a survey as part of a research study about your feelings and experience during your clinic visit to the Aflac Cancer &amp; Blood Disorders Center.
 
 This survey is being conducted to determine what we can do to improve the experience of patients in our clinic by looking at timepoints in the clinic visit, asking about feelings in different areas of clinic, and asking for opportunities for improvement. The survey will consist of questions pertaining to feelings, wait-times and what is good and can be made better in clinic. The survey will take approximately 20-30 minutes of your time throughout the clinic visit. Your participation in this survey is completely voluntary. This means you do not have to participate if you don’t want to. 
 
 If you agree to participate, you have the right to only answer the questions you choose to answer. The potential risks of this research are minimal and confidentiality of private health information that you share with us will be maintained to the highest level. You have the right to stop participation at any point during the survey if you so choose. We expect to enroll 100-200 participants in this study. 
 
-If you have questions or concerns regarding this research, you can contact the PI, Dr. Karen Wasilewski-Masker, at 404-785-3240 or the Children’s Healthcare of Atlanta IRB, the committee that works to protect your rights and welfare at the Aflac Cancer &amp; Blood Disorders Center. If you would like to participate- please accept the terms and continue with completing this online survey. Personal Health Information (PHI) will not be collected as part of this study. Please be sure you return the research tablet at the end of the visit to the front desk.</mutableString>
+If you have questions or concerns regarding this research, you can contact the PI, Dr. Karen Wasilewski-Masker, at 404-785-3240 or the Children’s Healthcare of Atlanta IRB, the committee that works to protect your rights and welfare at the Aflac Cancer &amp; Blood Disorders Center. If you would like to participate- please accept the terms and continue with completing this online survey. Personal Health Information (PHI) will not be collected as part of this study. Please be sure you return the research tablet at the end of the visit to the front desk.</string>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outlet property="investigator" destination="5Ac-ov-yHT" id="YJP-28-jSh"/>
-                        <outlet property="studyTitle" destination="T5E-vV-9LH" id="K1d-G1-RgE"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wim-Y5-FuC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -130,7 +122,7 @@ If you have questions or concerns regarding this research, you can contact the P
         <!--Treatment-->
         <scene sceneID="V0E-Hx-AHr">
             <objects>
-                <viewController id="nZM-LQ-gVG" customClass="Treatment" sceneMemberID="viewController">
+                <viewController id="nZM-LQ-gVG" customClass="Treatment" customModule="ducktab" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pNy-tX-iX0"/>
                         <viewControllerLayoutGuide type="bottom" id="qXL-Ic-dgy"/>
@@ -148,7 +140,7 @@ If you have questions or concerns regarding this research, you can contact the P
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next &gt;" image="Next_btn"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="toCharacter" id="hOj-tA-1i5"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="toCharacter" id="lY5-Ga-DuX"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="lGS-TZ-4Nn">
@@ -164,7 +156,7 @@ If you have questions or concerns regarding this research, you can contact the P
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="no"/>
                                 <connections>
-                                    <action selector="noButton:" destination="nZM-LQ-gVG" eventType="touchUpInside" id="m6j-SA-TDQ"/>
+                                    <action selector="noClicked:" destination="nZM-LQ-gVG" eventType="touchUpInside" id="gq5-ff-eA0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nj7-Ac-tks">
@@ -172,7 +164,7 @@ If you have questions or concerns regarding this research, you can contact the P
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="yes"/>
                                 <connections>
-                                    <action selector="yesButton:" destination="nZM-LQ-gVG" eventType="touchUpInside" id="Rni-9I-5Cc"/>
+                                    <action selector="yesClicked:" destination="nZM-LQ-gVG" eventType="touchUpInside" id="NHw-VB-slF"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hereForText" translatesAutoresizingMaskIntoConstraints="NO" id="aGd-Ze-zgE">
@@ -184,8 +176,7 @@ If you have questions or concerns regarding this research, you can contact the P
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="hem"/>
                                 <connections>
-                                    <action selector="hemButton:" destination="nZM-LQ-gVG" eventType="touchUpInside" id="XlE-1Q-Vdp"/>
-                                    <action selector="hemClicked:" destination="nZM-LQ-gVG" eventType="touchUpInside" id="AmP-yw-abN"/>
+                                    <action selector="hemClicked:" destination="nZM-LQ-gVG" eventType="touchUpInside" id="Xng-wp-1Bd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s98-yh-7cL">
@@ -193,38 +184,52 @@ If you have questions or concerns regarding this research, you can contact the P
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="onco"/>
                                 <connections>
-                                    <action selector="oncoButton:" destination="nZM-LQ-gVG" eventType="touchUpInside" id="0N3-tf-ROx"/>
-                                    <action selector="oncoClicked:" destination="nZM-LQ-gVG" eventType="touchUpInside" id="c2A-EK-4Us"/>
+                                    <action selector="oncoClicked:" destination="nZM-LQ-gVG" eventType="touchUpInside" id="f8H-xj-t5E"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nP6-ne-MYb">
+                                <rect key="frame" x="264" y="509" width="275" height="275"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gs-sA-IOI">
                                 <rect key="frame" x="110" y="815.5" width="568.5" height="75.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="noSure"/>
                                 <connections>
-                                    <action selector="notSureButton:" destination="nZM-LQ-gVG" eventType="touchUpInside" id="Vkf-ba-830"/>
-                                    <action selector="notSureClicked:" destination="nZM-LQ-gVG" eventType="touchUpInside" id="xbh-w1-Yef"/>
+                                    <action selector="notSureClicked:" destination="nZM-LQ-gVG" eventType="touchUpInside" id="PXi-db-FDe"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notSureSelect" translatesAutoresizingMaskIntoConstraints="NO" id="82H-Am-nlS">
-                                <rect key="frame" x="110" y="815.5" width="568.5" height="75.5"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fhf-iv-yk4">
+                                <rect key="frame" x="274" y="789" width="568.5" height="75.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hemoncoSelect" translatesAutoresizingMaskIntoConstraints="NO" id="fXO-jr-Nti">
-                                <rect key="frame" x="109" y="503" width="275" height="275"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IOO-4m-w9M">
+                                <rect key="frame" x="299" y="307" width="138.5" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TREATMENT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTB-H7-ONs">
+                                <rect key="frame" x="363" y="899" width="122" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIL-Eg-STC">
+                                <rect key="frame" x="379" y="928" width="90" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="hemButton" destination="EO6-vL-86f" id="NHT-An-qvl"/>
-                        <outlet property="noButton" destination="ZiS-05-Zjo" id="hhm-xU-auX"/>
-                        <outlet property="notSureButton" destination="8Gs-sA-IOI" id="0f8-I6-78d"/>
-                        <outlet property="oncoButton" destination="s98-yh-7cL" id="xut-ZC-NSr"/>
-                        <outlet property="selectTreatment" destination="fXO-jr-Nti" id="cr7-MU-wvT"/>
-                        <outlet property="selectTreatment2" destination="82H-Am-nlS" id="656-4U-3Ja"/>
-                        <outlet property="yesButton" destination="Nj7-Ac-tks" id="w2V-B4-Gyf"/>
+                        <outlet property="AppUsed" destination="GIL-Eg-STC" id="ySp-4D-Bki"/>
+                        <outlet property="selectTreat1" destination="nP6-ne-MYb" id="nMg-x2-3XO"/>
+                        <outlet property="selectTreat2" destination="fhf-iv-yk4" id="h5q-8C-bgw"/>
+                        <outlet property="selectYesNo" destination="IOO-4m-w9M" id="YPI-LM-ozD"/>
+                        <outlet property="treatText" destination="jTB-H7-ONs" id="4ma-fE-E9x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V6A-dn-Qix" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -338,11 +343,16 @@ If you have questions or concerns regarding this research, you can contact the P
                                 <rect key="frame" x="0.0" y="184" width="233" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fTv-6w-R3n">
+                                <rect key="frame" x="104" y="542" width="180" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="currentImage" destination="5v4-Ey-dGt" id="YLh-wE-aKK"/>
+                        <outlet property="selectedChar" destination="fTv-6w-R3n" id="tFN-DK-hGx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -438,17 +448,30 @@ If you have questions or concerns regarding this research, you can contact the P
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="treatment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPL-X5-j7w">
+                                <rect key="frame" x="362" y="936" width="158" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TzA-Xh-dsi">
+                                <rect key="frame" x="238" y="567" width="293" height="310"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="cImage" destination="KX9-FQ-BJt" id="w6i-Ee-pic"/>
                         <outlet property="gen" destination="sts-tB-K4q" id="wS8-lX-KZv"/>
+                        <outlet property="selectedGender" destination="TzA-Xh-dsi" id="zEZ-gc-IFA"/>
+                        <outlet property="treat" destination="hPL-X5-j7w" id="xq5-dz-VFf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nys-zU-H3m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="839" y="136"/>
+            <point key="canvasLocation" x="838.28125" y="135.9375"/>
         </scene>
         <!--Age-->
         <scene sceneID="L3j-2F-5t1">
@@ -617,6 +640,14 @@ If you have questions or concerns regarding this research, you can contact the P
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bjA-wR-bWu">
+                                <rect key="frame" x="137" y="554" width="110" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Day-9L-n98">
+                                <rect key="frame" x="148" y="783" width="284" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -624,6 +655,8 @@ If you have questions or concerns regarding this research, you can contact the P
                         <outlet property="age" destination="PIn-At-8cU" id="9jX-QF-VDd"/>
                         <outlet property="cImage" destination="4ZN-H7-SK4" id="Qlz-YO-ipe"/>
                         <outlet property="gender" destination="lPr-rG-9jR" id="gRc-JI-1oS"/>
+                        <outlet property="selectAge1" destination="bjA-wR-bWu" id="Ia5-QN-iwN"/>
+                        <outlet property="selectAge2" destination="Day-9L-n98" id="qHX-co-AEh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8NG-vl-WWK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1205,12 +1238,10 @@ If you have questions or concerns regarding this research, you can contact the P
         <image name="goingtoanotherroom" width="459" height="193"/>
         <image name="gotoanotherroom" width="1047" height="241"/>
         <image name="hem" width="570" height="570"/>
-        <image name="hemoncoSelect" width="550" height="550"/>
         <image name="hereForText" width="715" height="58"/>
         <image name="meowth" width="380" height="374"/>
         <image name="no" width="275" height="120"/>
         <image name="noSure" width="1157" height="171"/>
-        <image name="notSureSelect" width="1137" height="151"/>
         <image name="onco" width="570" height="570"/>
         <image name="previewRec" width="1392" height="435"/>
         <image name="questionbox" width="1392" height="1099"/>
@@ -1222,9 +1253,9 @@ If you have questions or concerns regarding this research, you can contact the P
         <image name="yes" width="275" height="120"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hOj-tA-1i5"/>
-        <segue reference="BJ3-Du-MTN"/>
-        <segue reference="9Ib-Hx-Jii"/>
         <segue reference="988-5C-1Fc"/>
+        <segue reference="obT-si-VVY"/>
+        <segue reference="3fi-ZQ-KHd"/>
+        <segue reference="kbu-Dv-4zr"/>
     </inferredMetricsTieBreakers>
 </document>

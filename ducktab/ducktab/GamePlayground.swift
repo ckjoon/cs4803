@@ -18,6 +18,7 @@ class GamePlayground: UIViewController {
     var currentAge:String!
     var currentURL: String!
     var treatmentType:String!
+    var usedApp:String!
     
     var currentLocation: String!{
         didSet{
@@ -82,6 +83,7 @@ class GamePlayground: UIViewController {
                 svc.cAge = currentAge
                 svc.treatmentType = treatmentType
                 svc.currentLocation = currentLocation
+                svc.usedApp = usedApp
             }
         }
         
