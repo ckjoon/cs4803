@@ -17,6 +17,8 @@ class GamePlayground: UIViewController {
     var currentGender: String!
     var currentAge:String!
     var currentURL: String!
+    var treatmentType:String!
+    
     var currentLocation: String!{
         didSet{
             let key = rootRef.child("current_location").childByAutoId().key
@@ -78,6 +80,7 @@ class GamePlayground: UIViewController {
                 svc.cImage = currentImage
                 svc.cGender = currentGender
                 svc.cAge = currentAge
+                svc.treatmentType = treatmentType
                 svc.currentLocation = currentLocation
             }
         }

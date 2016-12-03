@@ -143,6 +143,14 @@ If you have questions or concerns regarding this research, you can contact the P
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5G-yb-b6S">
+                                <rect key="frame" x="589" y="956" width="139" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next &gt;" image="Next_btn"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="toCharacter" id="hOj-tA-1i5"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="lGS-TZ-4Nn">
                                 <rect key="frame" x="115" y="32" width="551" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -157,7 +165,6 @@ If you have questions or concerns regarding this research, you can contact the P
                                 <state key="normal" image="no"/>
                                 <connections>
                                     <action selector="noButton:" destination="nZM-LQ-gVG" eventType="touchUpInside" id="m6j-SA-TDQ"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="noToChar" id="d2V-4j-Cw6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nj7-Ac-tks">
@@ -166,7 +173,6 @@ If you have questions or concerns regarding this research, you can contact the P
                                 <state key="normal" image="yes"/>
                                 <connections>
                                     <action selector="yesButton:" destination="nZM-LQ-gVG" eventType="touchUpInside" id="Rni-9I-5Cc"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="yesToChar" id="xF4-un-J1p"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hereForText" translatesAutoresizingMaskIntoConstraints="NO" id="aGd-Ze-zgE">
@@ -179,7 +185,7 @@ If you have questions or concerns regarding this research, you can contact the P
                                 <state key="normal" image="hem"/>
                                 <connections>
                                     <action selector="hemButton:" destination="nZM-LQ-gVG" eventType="touchUpInside" id="XlE-1Q-Vdp"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="hemToChar" id="Vfz-ZN-RTb"/>
+                                    <action selector="hemClicked:" destination="nZM-LQ-gVG" eventType="touchUpInside" id="AmP-yw-abN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s98-yh-7cL">
@@ -188,7 +194,7 @@ If you have questions or concerns regarding this research, you can contact the P
                                 <state key="normal" image="onco"/>
                                 <connections>
                                     <action selector="oncoButton:" destination="nZM-LQ-gVG" eventType="touchUpInside" id="0N3-tf-ROx"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="oncoToChar" id="Vdg-DN-N1z"/>
+                                    <action selector="oncoClicked:" destination="nZM-LQ-gVG" eventType="touchUpInside" id="c2A-EK-4Us"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gs-sA-IOI">
@@ -197,9 +203,17 @@ If you have questions or concerns regarding this research, you can contact the P
                                 <state key="normal" image="noSure"/>
                                 <connections>
                                     <action selector="notSureButton:" destination="nZM-LQ-gVG" eventType="touchUpInside" id="Vkf-ba-830"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="noSureToChar" id="GnB-cC-6gg"/>
+                                    <action selector="notSureClicked:" destination="nZM-LQ-gVG" eventType="touchUpInside" id="xbh-w1-Yef"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notSureSelect" translatesAutoresizingMaskIntoConstraints="NO" id="82H-Am-nlS">
+                                <rect key="frame" x="110" y="815.5" width="568.5" height="75.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hemoncoSelect" translatesAutoresizingMaskIntoConstraints="NO" id="fXO-jr-Nti">
+                                <rect key="frame" x="109" y="503" width="275" height="275"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -208,6 +222,8 @@ If you have questions or concerns regarding this research, you can contact the P
                         <outlet property="noButton" destination="ZiS-05-Zjo" id="hhm-xU-auX"/>
                         <outlet property="notSureButton" destination="8Gs-sA-IOI" id="0f8-I6-78d"/>
                         <outlet property="oncoButton" destination="s98-yh-7cL" id="xut-ZC-NSr"/>
+                        <outlet property="selectTreatment" destination="fXO-jr-Nti" id="cr7-MU-wvT"/>
+                        <outlet property="selectTreatment2" destination="82H-Am-nlS" id="656-4U-3Ja"/>
                         <outlet property="yesButton" destination="Nj7-Ac-tks" id="w2V-B4-Gyf"/>
                     </connections>
                 </viewController>
@@ -1189,10 +1205,12 @@ If you have questions or concerns regarding this research, you can contact the P
         <image name="goingtoanotherroom" width="459" height="193"/>
         <image name="gotoanotherroom" width="1047" height="241"/>
         <image name="hem" width="570" height="570"/>
+        <image name="hemoncoSelect" width="550" height="550"/>
         <image name="hereForText" width="715" height="58"/>
         <image name="meowth" width="380" height="374"/>
         <image name="no" width="275" height="120"/>
         <image name="noSure" width="1157" height="171"/>
+        <image name="notSureSelect" width="1137" height="151"/>
         <image name="onco" width="570" height="570"/>
         <image name="previewRec" width="1392" height="435"/>
         <image name="questionbox" width="1392" height="1099"/>
@@ -1204,9 +1222,9 @@ If you have questions or concerns regarding this research, you can contact the P
         <image name="yes" width="275" height="120"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GnB-cC-6gg"/>
+        <segue reference="hOj-tA-1i5"/>
         <segue reference="BJ3-Du-MTN"/>
         <segue reference="9Ib-Hx-Jii"/>
-        <segue reference="Kgo-PK-pHU"/>
+        <segue reference="988-5C-1Fc"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -15,6 +15,7 @@ class Age: UIViewController {
     var currentImage: UIImage!
     var currentGender: String!
     var currentAge:String!
+    var treatmentType:String!
     
     @IBOutlet weak var age: UILabel!
     @IBOutlet weak var gender: UILabel!
@@ -87,6 +88,7 @@ class Age: UIViewController {
                 svc.cImage = currentImage
                 svc.cGender = currentGender
                 svc.cAge = currentAge
+                svc.treatmentType = treatmentType
             }
         }
         
@@ -94,6 +96,7 @@ class Age: UIViewController {
             if let svc = segue.destinationViewController as? Gender{
                 svc.currentImage = currentImage
                 svc.genderText = currentGender
+                svc.treatmentType = treatmentType
             }
         }
 

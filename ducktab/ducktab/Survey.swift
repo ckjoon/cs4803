@@ -16,6 +16,7 @@ class Survey: UIViewController {
     var cGender: String!
     var cAge:String!
     var currentLocation:String!
+    var treatmentType:String!
     
     @IBOutlet weak var question2: UILabel!
     @IBOutlet weak var answer4: UITextField!
@@ -96,6 +97,7 @@ class Survey: UIViewController {
                 svc.cImage = cImage
                 svc.cGender = cGender
                 svc.cAge = cAge
+                svc.treatmentType = treatmentType
             }
         }
     }

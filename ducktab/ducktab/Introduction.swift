@@ -12,13 +12,17 @@ import Firebase
 class Introduction: UIViewController {
     
     var cImage:UIImage!
+    var treatmentType:String!
     @IBOutlet weak var currentImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         currentImage.image = UIImage(named:"meowth_icon")
         if((cImage) != nil){
             currentImage.image=cImage
         }
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -57,7 +61,7 @@ class Introduction: UIViewController {
         if (segue.identifier == "toGender") {
             if let svc = segue.destinationViewController as? Gender{
                 svc.currentImage = currentImage.image
-
+                svc.treatmentType = treatmentType
             }
         }
 

@@ -13,6 +13,7 @@ class QRInstruction: UIViewController {
     var cImage: UIImage!
     var cGender: String!
     var cAge:String!
+    var treatmentType:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,7 @@ class QRInstruction: UIViewController {
                 svc.currentImage = cImage
                 svc.currentGender = cGender
                 svc.currentAge = cAge
+                svc.treatmentType = treatmentType
             }
         }
         
@@ -31,6 +33,7 @@ class QRInstruction: UIViewController {
             if let svc = segue.destinationViewController as? Age{
                 svc.currentImage = cImage
                 svc.currentGender = cGender
+                svc.treatmentType = treatmentType
             }
         }
         

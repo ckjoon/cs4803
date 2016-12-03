@@ -15,6 +15,8 @@ class Gender: UIViewController {
     
     var currentImage: UIImage!
     var genderText:String!
+    var treatmentType:String!
+    
     @IBOutlet weak var gen: UILabel!
     @IBOutlet weak var cImage: UIImageView!
     
@@ -26,7 +28,6 @@ class Gender: UIViewController {
         if((genderText) != ""){
             gen.text=genderText
         }
-        
     }
     
     @IBAction func boyClicked(sender: AnyObject) {
@@ -37,17 +38,18 @@ class Gender: UIViewController {
         gen.text = "GIRL"
     }
     
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "toAge") {
             if let svc = segue.destinationViewController as? Age{
                 svc.currentImage = currentImage
                 svc.currentGender = gen.text
+                svc.treatmentType = treatmentType
             }
         }
         if (segue.identifier == "toIntroduction") {
             if let svc = segue.destinationViewController as? Introduction{
                 svc.cImage = currentImage
+                svc.treatmentType = treatmentType
             }
         }
         
