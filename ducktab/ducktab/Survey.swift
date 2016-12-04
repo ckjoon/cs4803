@@ -79,8 +79,8 @@ class Survey: UIViewController {
                     let key = putAnswer.childByAutoId().key
                     let post = ["age": cAge,
                                 "gender":cGender,
-//                                "treatmentType": treatmentType,
-//                                "appUsed": usedApp,
+                                "treatmentType": treatmentType,
+                                "appUsed": usedApp,
                                 "answer": answers[i].text]
                     let childUpdates = ["\(key)":post]
                     putAnswer.updateChildValues(childUpdates)
