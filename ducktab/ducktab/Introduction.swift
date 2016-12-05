@@ -20,6 +20,8 @@ class Introduction: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set and hide the 'selected' image
         selectedChar.hidden = true
         selectedChar.image = UIImage(named: "charSelect")
         
@@ -40,6 +42,8 @@ class Introduction: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // Select respective character and it will present the selected image
     
     @IBAction func meowthClicked(sender: UIButton) {
         currentImage.image = UIImage(named:"meowth_icon")
@@ -81,6 +85,8 @@ class Introduction: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        // Navigate to gender selection by hitting 'Next' 
         if (segue.identifier == "toGender") {
             if let svc = segue.destinationViewController as? Gender{
                 svc.currentImage = currentImage.image

@@ -22,7 +22,7 @@ class Treatment: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Loading image resources and placing them at respective location
         
         selectTreat1.image = UIImage(named: "hemoncoSelect")
         selectTreat2.image = UIImage (named: "notSureSelect")
@@ -37,9 +37,13 @@ class Treatment: UIViewController {
         selectYesNo.frame.origin.x = 110
         selectYesNo.frame.origin.y = 815.5
         
+        // Hiding the 'selected' images
+        
         selectTreat1.hidden = true
         selectTreat2.hidden = true
         selectYesNo.hidden = true
+        
+        // Setting default values for treatment and app used
         
         treatmentType = "Not_Sure"
         usedApp = "No"
@@ -51,6 +55,7 @@ class Treatment: UIViewController {
     }
     
     @IBAction func noClicked(sender: AnyObject) {
+        // When 'no' is clicked, unhide the 'selected' image and place it on 'No'
         
         selectYesNo.frame.origin.x = 229
         selectYesNo.frame.origin.y = 280
@@ -60,6 +65,7 @@ class Treatment: UIViewController {
     }
     
     @IBAction func yesClicked(sender: AnyObject) {
+        // When 'yes' is clicked, unhide the 'selected' image and place it on 'yes'
         
         selectYesNo.frame.origin.x = 401
         selectYesNo.frame.origin.y = 280
@@ -69,6 +75,7 @@ class Treatment: UIViewController {
     }
     
     @IBAction func hemClicked(sender: AnyObject) {
+        // When 'Hematology' is clicked, unhide the 'selected' image and place it on 'Hematology'
         
         selectTreat1.frame.origin.x = 109
         selectTreat1.frame.origin.y = 509
@@ -79,6 +86,8 @@ class Treatment: UIViewController {
     }
     
     @IBAction func oncoClicked(sender: AnyObject) {
+        // When 'Oncology' is clicked, unhide the 'selected' image and place it on 'Oncology'
+        
         selectTreat1.frame.origin.x = 405
         selectTreat1.frame.origin.y = 509
         selectTreat1.hidden = false
@@ -88,7 +97,8 @@ class Treatment: UIViewController {
     }
     
     @IBAction func notSureClicked(sender: AnyObject) {
-    
+            // When 'Not Sure' is clicked, unhide the 'selected' image and place it on 'Not Sure'
+        
             selectTreat2.frame.origin.x = 110
             selectTreat2.frame.origin.y = 815.5
             selectTreat1.hidden = true
@@ -98,14 +108,14 @@ class Treatment: UIViewController {
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        // Navigate to Character screen by hitting 'Next'
+        
         if (segue.identifier == "toCharacter") {
             if let svc = segue.destinationViewController as? Introduction{
                 svc.treatmentType = treatmentType
                 svc.usedApp = usedApp
             }
         }
-
     }
-
-
 }

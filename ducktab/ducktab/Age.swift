@@ -27,8 +27,12 @@ class Age: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Variables carry forwarded from previous screens
         cImage.image=currentImage
         gender.text=currentGender
+        
+        //set the selected image and hide it
         selectAge1.hidden = true
         selectAge1.image = UIImage(named: "ageSelect")
         selectAge2.hidden = true
@@ -37,8 +41,12 @@ class Age: UIViewController {
     
     
     @IBAction func threeClicked(sender: AnyObject) {
+        
+        // convert selected age into range
         age.text = "3"
         currentAge = "3~6";
+        
+        // show respective selected image
         selectAge2.hidden = true
         selectAge1.frame.origin.x = 81
         selectAge1.frame.origin.y = 539
@@ -46,8 +54,12 @@ class Age: UIViewController {
     }
     
     @IBAction func fourClicked(sender: AnyObject) {
+        
+        // convert selected age into range
         age.text = "4"
         currentAge = "3~6";
+        
+        // show respective selected image
         selectAge2.hidden = true
         selectAge1.frame.origin.x = 255
         selectAge1.frame.origin.y = 539
@@ -55,8 +67,12 @@ class Age: UIViewController {
     }
     
     @IBAction func fiveClicked(sender: AnyObject) {
+        
+        // convert selected age into range
         age.text = "5"
         currentAge = "3~6";
+        
+        // show respective selected image
         selectAge2.hidden = true
         selectAge1.frame.origin.x = 428
         selectAge1.frame.origin.y = 539
@@ -64,8 +80,12 @@ class Age: UIViewController {
     }
     
     @IBAction func sixClicked(sender: AnyObject) {
+        
+        // convert selected age into range
         age.text = "6"
         currentAge = "3~6";
+        
+        // show respective selected image
         selectAge2.hidden = true
         selectAge1.frame.origin.x = 588
         selectAge1.frame.origin.y = 539
@@ -73,8 +93,12 @@ class Age: UIViewController {
     }
     
     @IBAction func sevenClicked(sender: AnyObject) {
+        
+        // convert selected age into range
         age.text = "7"
         currentAge = "7~10";
+        
+        // show respective selected image
         selectAge2.hidden = true
         selectAge1.frame.origin.x = 81
         selectAge1.frame.origin.y = 672
@@ -82,8 +106,12 @@ class Age: UIViewController {
     }
     
     @IBAction func eightClicked(sender: AnyObject) {
+        
+        // convert selected age into range
         age.text = "8"
         currentAge = "7~10";
+        
+        // show respective selected image
         selectAge2.hidden = true
         selectAge1.frame.origin.x = 255
         selectAge1.frame.origin.y = 672
@@ -91,8 +119,12 @@ class Age: UIViewController {
     }
     
     @IBAction func nineClicked(sender: AnyObject) {
+        
+        // convert selected age into range
         age.text = "9"
         currentAge = "7~10";
+        
+        // show respective selected image
         selectAge2.hidden = true
         selectAge1.frame.origin.x = 428
         selectAge1.frame.origin.y = 672
@@ -100,8 +132,12 @@ class Age: UIViewController {
     }
     
     @IBAction func tenClicked(sender: AnyObject) {
+        
+        // convert selected age into range
         age.text = "10"
         currentAge = "7~10";
+        
+        // show respective selected image
         selectAge2.hidden = true
         selectAge1.frame.origin.x = 588
         selectAge1.frame.origin.y = 672
@@ -109,8 +145,12 @@ class Age: UIViewController {
     }
     
     @IBAction func elevenClicked(sender: AnyObject) {
+        
+        // convert selected age into range
         age.text = "11~15"
         currentAge = "11~15";
+        
+        // show respective selected image
         selectAge1.hidden = true
         selectAge2.frame.origin.x = 81
         selectAge2.frame.origin.y = 790
@@ -118,8 +158,12 @@ class Age: UIViewController {
     }
     
     @IBAction func sixteenClicked(sender: AnyObject) {
+        
+        // convert selected age into range
         age.text = "16~20"
         currentAge = "16~20";
+        
+        // show respective selected image
         selectAge1.hidden = true
         selectAge2.frame.origin.x = 428
         selectAge2.frame.origin.y = 790
@@ -127,6 +171,8 @@ class Age: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        // Hit 'Back'. Navigate to Character screen.
         if (segue.identifier == "toInst") {
             if let svc = segue.destinationViewController as? QRInstruction{
                 svc.cImage = currentImage
@@ -137,6 +183,7 @@ class Age: UIViewController {
             }
         }
         
+        // Hit 'Next'. Navigate to Gender screen
         if (segue.identifier == "backToAge") {
             if let svc = segue.destinationViewController as? Gender{
                 svc.currentImage = currentImage

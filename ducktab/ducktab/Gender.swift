@@ -30,6 +30,8 @@ class Gender: UIViewController {
         if((genderText) != ""){
             gen.text=genderText
         }
+        
+        // Set the treatment type input from previous screen
         treat.text = treatmentType
         
         selectedGender.hidden = true
@@ -37,6 +39,7 @@ class Gender: UIViewController {
     }
     
     @IBAction func boyClicked(sender: AnyObject) {
+        // When 'Boy' is clicked, unhide the 'selected' image and place it on 'Boy'
         gen.text = "BOY"
         selectedGender.hidden = false
         selectedGender.frame.origin.x = 70
@@ -44,6 +47,7 @@ class Gender: UIViewController {
     }
 
     @IBAction func girlClicked(sender: AnyObject) {
+        // When 'Girl' is clicked, unhide the 'selected' image and place it on 'Girl'
         gen.text = "GIRL"
         selectedGender.hidden = false
         selectedGender.frame.origin.x = 407
@@ -51,6 +55,7 @@ class Gender: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Navigate to Age screen by hitting 'Next'
         if (segue.identifier == "toAge") {
             if let svc = segue.destinationViewController as? Age{
                 svc.currentImage = currentImage
@@ -59,6 +64,8 @@ class Gender: UIViewController {
                 svc.usedApp = usedApp
             }
         }
+        
+        // Navigate to Character screen by hitting 'Back'
         if (segue.identifier == "toIntroduction") {
             if let svc = segue.destinationViewController as? Introduction{
                 svc.cImage = currentImage

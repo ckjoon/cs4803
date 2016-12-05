@@ -5,12 +5,15 @@
 //  Created by Yeon Joon Choi on 10/18/16.
 //  Copyright © 2016 gatech.edu. All rights reserved.
 //
+// This program gathers all parameters and pushes data to Firebase. Also, it fetches the questions from Firebase and displays to patients.
 
 import Foundation
 import UIKit
 import Firebase
 
 class Survey: UIViewController {
+    
+    // Declare all variables
     
     var cImage: UIImage!
     var cGender: String!
@@ -31,7 +34,9 @@ class Survey: UIViewController {
     @IBOutlet weak var question4: UILabel!
     @IBOutlet weak var question1: UILabel!
     @IBOutlet weak var question3: UILabel!
-    let UUIDValue = UIDevice.currentDevice().identifierForVendor!.UUIDString //unique identifier for the device
+    
+    //unique identifier for the device
+    let UUIDValue = UIDevice.currentDevice().identifierForVendor!.UUIDString
 
     @IBOutlet weak var currentImage: UIImageView!
     
@@ -42,6 +47,9 @@ class Survey: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Load questions based on location
+        
         currentImage.image=cImage
         let surveys = rootRef.child("questions").child(currentLocation)
         labels.append(question1)
@@ -65,12 +73,11 @@ class Survey: UIViewController {
             }
         })
     }
-    
-    
 
-    
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        // Before navigation push data to Firebase
+        
         if (segue.identifier == "backToInst") {
             var i = 0;
             while i < 5{

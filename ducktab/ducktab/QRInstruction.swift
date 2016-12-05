@@ -21,6 +21,8 @@ class QRInstruction: UIViewController {
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        // Hit 'Next' to navigate to scan QR code
         if (segue.identifier == "toQRCode") {
             if let svc = segue.destinationViewController as? QRcode{
                 svc.currentImage = cImage
@@ -31,6 +33,7 @@ class QRInstruction: UIViewController {
             }
         }
         
+        // Hit 'Back' to navigate to Age selection
         if (segue.identifier == "backToAge") {
             if let svc = segue.destinationViewController as? Age{
                 svc.currentImage = cImage

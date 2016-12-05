@@ -111,6 +111,8 @@ class QRcode: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        // Hit 'Next' to see the story / game
         if (segue.identifier == "toPlayground") {
             if let svc = segue.destinationViewController as? GamePlayground{
                 svc.currentImage = currentImage
