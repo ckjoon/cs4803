@@ -10,70 +10,169 @@
     firebase.initializeApp(config);
 
     angular
-        .module('ducktab', ['firebase'])
-        .controller("MyCtrl", function ($firebaseObject) {
-            const rootRef = firebase.database().ref().child("survey questions");
-            this.object = $firebaseObject(rootRef);
+        .module('ducktab', ['firebase', 'ngRoute'])
+        .controller("MyCtrl", ['$scope', '$firebaseObject', '$document', '$location', function ($scope, $firebaseObject, $document, $location) {
+            var txtEmail = $document[0].getElementById('txtEmail');
+            var txtPassword = $document[0].getElementById('txtPassword');
+            var btnLogin = $document[0].getElementById('btnLogin');
+            var btnSignup = $document[0].getElementById('btnSignup');
+            var formLogin = $document[0].getElementById('loginForm');
+            var datadump = $document[0].getElementById('message');
+            var email = txtEmail.value;
+            var pass = txtPassword.value;
+
+            $scope.login = function(){
+              // get email and pass
+              var email = txtEmail.value;
+              var pass = txtPassword.value;
+              var auth = firebase.auth();
+              var promise = auth.signInWithEmailAndPassword(email, pass);
+              promise.catch(function(e){alert(e.message);});
+              $location.path("\home")
+            }
+
+            btnSignup.addEventListener('click', e => {
+                const email = txtEmail.value;
+                const pass = txtPassword.value;
+                const auth = firebase.auth();
+
+                const promise = auth.createUserWithEmailAndPassword(email, pass);
+
+                promise.catch(function(e){
+                  alert(e.message);
+                });
+
+                promise.then(function(){
+                  alert("User account created");
+                })
+
+            });
+
+            firebase.auth().onAuthStateChanged(firebaseUser => {
+                if (firebaseUser) {
+                    console.log(firebaseUser);
+                } else {
+                    console.log("not logged in");
+                }
+            });
+
+
+        }])
+        .controller("HomeCtrl", ['$scope', '$firebaseObject', '$document', '$location', '$q', function ($scope, $firebaseObject, $document, $location, $q) {
+
+          // if (firebase.auth.currentUser == undefined){
+          //   firebase.auth().signOut();
+          //   $location.path("/");
+          // }
+          var rootRefQuestions = firebase.database().ref().child("questions");
+          $firebaseObject(rootRefQuestions).$bindTo($scope, "questionWithLocations");
+          var rootRefCurrentLocation = firebase.database().ref().child("current_location");
+          $firebaseObject(rootRefCurrentLocation).$bindTo($scope, "currentUserLocations");
+          var goToQuestionDetail = function(){
+            $location.path("/questionDetail");
+          };
+
+          $scope.openDetails = function(surveyQuestion){
+              localStorage.setItem("questionToDetail", surveyQuestion);
+              goToQuestionDetail();
+          }
+
+          $scope.logout = function(){
+            firebase.auth().signOut();
+            $location.path("/");
+          }
+
+          $scope.getLength = function(obj) {
+            return Object.keys(obj).length;
+          }
+
+          $scope.setModifyQuestionData = function(question, location){
+            $scope.originalQuestion = question;
+            $scope.modifiedQuestion = question;
+            $scope.questionLocation = location;
+          }
+
+          $scope.updateQuestionInFB = function(){
+            var modifiedQuestion = $scope.modifiedQuestion;
+            //TODO: Take care of the tempObject hack
+            var tempObject = {
+              gender: 'M',
+              age: '10000',
+              answer: ''
+            }
+            rootRefQuestions.child($scope.questionLocation).child($scope.originalQuestion).set({});
+            rootRefQuestions.child($scope.questionLocation).child($scope.modifiedQuestion).set({'remove': tempObject});
+            $scope.originalQuestion = '';
+            $scope.modifiedQuestion = '';
+            $scope.questionLocation = '';
+          }
+
+          $scope.setQuestionToDelete = function(question, location){
+            $scope.questionToDelete = question;
+            $scope.locationOfQuestionToDelete = location;
+          }
+
+          $scope.deleteQuestionFromFB = function(){
+            rootRefQuestions.child($scope.locationOfQuestionToDelete).child($scope.questionToDelete).set({});
+          }
+
+          $scope.newQuestion = '';
+          $scope.newQuestionLocation = '';
+          $scope.addQuestionToFB = function(){
+            if ($scope.newQuestion != null && $scope.newQuestionLocation != null){
+              var tempObject = {
+                gender: 'M',
+                age: '10000',
+                answer: ''
+              }
+              rootRefQuestions.child($scope.newQuestionLocation).child($scope.newQuestion).set({'remove': tempObject});
+              $scope.newQuestion = '';
+              $scope.newQuestionLocation = '';
+            }
+          }
+
+          $scope.newQRCode= '';
+          $scope.newQRCodeLocation = '';
+          $scope.addQRCodeToFB = function(){
+            if ($scope.newQRCode != null && $scope.newQRCodeLocation != null){
+              var rootRefQRCodes = firebase.database().ref().child("qrcode");
+              var newQRCode = $scope.newQRCode;
+              var newQRCodeLocation = $scope.newQRCodeLocation;
+              var tempObject = {};
+              tempObject[newQRCodeLocation] = newQRCode;
+              rootRefQRCodes.push(tempObject);
+              $scope.newQRCode = '';
+              $scope.newQRCodeLocation = '';
+            }
+          }
+
+        }])
+        .controller("QuestionDetailCtrl", ['$scope', '$firebaseObject', '$document', '$location', function ($scope, $firebaseObject, $document, $location) {
+          $scope.question = localStorage.getItem("questionToDetail");;
+          var rootRef = firebase.database().ref().child("questions")
+          $firebaseObject(rootRef).$bindTo($scope, "questions");
+          $scope.backToQuestions = function(){
+            $location.path('/home');
+          }
+          $scope.logout = function(){
+            firebase.auth().signOut();
+            $location.path("/");
+          }
+        }])
+        .config(function($routeProvider){
+          $routeProvider
+          .when("/", {
+              templateUrl : "./login.html",
+              controller: "MyCtrl"
+          })
+          .when('/home', {
+            templateUrl: "./home.html",
+            controller: "HomeCtrl"
+          })
+          .when('/questionDetail', {
+            templateUrl: "./questionDetail.html",
+            controller: "QuestionDetailCtrl"
+          })
         });
-
-    const txtEmail = document.getElementById('txtEmail');
-    const txtPassword = document.getElementById('txtPassword');
-    const btnLogin = document.getElementById('btnLogin');
-    const btnSignup = document.getElementById('btnSignup');
-    const btnLogout = document.getElementById('btnLogout');
-    const formLogin = document.getElementById('loginForm');
-    const datadump = document.getElementById('message');
-    const email = txtEmail.value;
-    const pass = txtPassword.value;
-    console.log(email);
-    console.log(pass);
-
-    btnLogin.addEventListener('click', e => {
-        // get email and pass
-        const email = txtEmail.value;
-        const pass = txtPassword.value;
-        const auth = firebase.auth();
-
-        const promise = auth.signInWithEmailAndPassword(email, pass);
-
-        promise.catch(e => console.log(e.message));
-
-    });
-
-    btnSignup.addEventListener('click', e => {
-        const email = txtEmail.value;
-        const pass = txtPassword.value;
-        const auth = firebase.auth();
-
-        const promise = auth.createUserWithEmailAndPassword(email, pass);
-
-        promise.catch(e => console.log(e.message));
-
-
-    });
-
-    btnLogout.addEventListener('click', e => {
-        firebase.auth().signOut();
-    });
-
-    firebase.auth().onAuthStateChanged(firebaseUser => {
-        if (firebaseUser) {
-            console.log(firebaseUser);
-            btnLogout.classList.remove('hide');
-            formLogin.classList.add('hide');
-            datadump.classList.remove('hide');
-
-
-
-        } else {
-            console.log("not logged in");
-            btnLogout.classList.add('hide');
-            datadump.classList.add('hide');
-            formLogin.classList.remove('hide');
-
-
-        }
-    });
-
 
 }());

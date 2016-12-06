@@ -37,6 +37,7 @@ $ git checkout development-iPad
 #### Install Xcode
 1. open appstore and search for  [Xcode](https://developer.apple.com/xcode/downloads)
 2. Click install
+
 #### Installing CocoaPod
 open Terminal and type
 ```sh
@@ -79,6 +80,4 @@ References regarding these material is available here:
 
 *[Firebase iOS Realtime Database Guides] (https://firebase.google.com/docs/database)
 *[Firebase iOS API Reference Documentation] (https://firebase.google.com/docs/reference/ios/firebasecore/api/reference/Classes)
-
-
 
