@@ -1,0 +1,38 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+<!--      <a class="navbar-brand" href="/">DuckTab</a>-->
+      <button id="btnBackToQuestions" class="btn btn-warning pull-right" ng-click="backToQuestions()">
+        Back To Questions
+      </button>
+      <button id=btnLogout ng-click="logout()" class="btn btn-danger pull-right">
+        Logout
+      </button>
+    </div>
+  </div>
+</nav>
+
+<span ng-repeat="locations in questions">
+  <div ng-repeat="(ques, ans) in locations" ng-if= "ques == question">
+    <h1 class="question"><b>Question:</b> {{question}}</h1>
+     <table class="table">
+       <thead>
+          <tr>
+              <th>Responses</th>
+              <th>Sentiment</th>
+              <th>Gender</th>
+              <th>Age</th>
+          </tr>
+       </thead>
+       <tbody>
+         <!-- Remove the 'remove' key hack -->
+          <tr ng-repeat = " (k,v) in ans" ng-if="k != 'remove'">
+              <td>{{v.answer}}</td>
+              <td>60%</td>
+              <td>{{v.gender}}</td>
+              <td>{{v.age}}</td>
+          </tr>
+       </tbody>
+      </table>
+    </div>
+</span>

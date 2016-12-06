@@ -1,0 +1,124 @@
+body {
+    padding-bottom: 40px;
+    background-color: #eee;
+}
+
+div.page-header h1{
+    padding-left: 30px;
+}
+
+div.col-lg-6{
+    height:300px;
+}
+
+div.col-lg-6 p{
+    font-size: 70px;
+    text-align: center;
+    padding-top: 60px;
+}
+
+div.left{
+    background:#F76B0C;
+    text-align: center; 
+}
+
+div.right{
+    background: #FFBC1C;
+    text-align: center;
+}
+
+div.rooms{
+    height: 200px;
+    text-align: center;
+}
+
+div.rooms{
+    background: #11C77E;
+}
+
+div.rooms h3{
+    font-size: 20px;
+}
+
+div.rooms p{
+    font-size: 50px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 150px auto;
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-signin .checkbox {
+    font-weight: normal;
+}
+
+.form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+button#btnLogout{
+    position:absolute;
+    right: 20px;
+    top:7px;
+}
+
+button#btnBackToQuestions{
+    position: absolute;
+    left:20px;
+    top:7px;
+}
+
+table.table tr th{
+    font-size: 18px;
+    padding-left: 30px;
+    line-height: 35px;
+}
+
+table.table tr td{
+    font-size: 18px;
+    padding-left: 30px;
+    line-height: 35px;
+}
+
+table.table tr th:nth-child(2), table.table tr td:nth-child(2),
+table.table tr th:nth-child(3), table.table tr td:nth-child(3){
+    text-align: center
+}
+
+h1.question{
+    font-size: 20px;
+    padding-left: 20px;
+    margin-bottom: 10px
+}  

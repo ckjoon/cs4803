@@ -1,0 +1,140 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="page-header">
+      <h1 style="padding-left:30px">Welcome to Ducktab!</h1>
+    </div>
+      <button id=btnLogout ng-click="logout()" class="btn btn-danger pull-right">Logout</button>
+  </div>
+</nav>
+
+<div>
+    <div class="col-lg-6 left"><h2># of Patients Online</h2><p>12</p></div>
+    <div class="col-lg-6 right"><h2>Overall Feedback Sentiment</h2><p>68%</p></div>
+    <div class="clearfix"></div>
+    <div class="row">
+        <div ng-repeat = "(locationName, userArray) in currentUserLocations" class="rooms col-lg-3 col-md-3 col-sm-6 col-xs-6">
+          <h3 ng-if="locationName == 'exam_room'">Examination Room</h3>
+          <h3 ng-if="locationName == 'postsedation_room'">Pre Sedation Room</h3>
+          <h3 ng-if="locationName == 'preprocedure_room'">Pre Procedure Room</h3>
+          <h3 ng-if="locationName == 'presedation_room'">Post Sedation Room</h3>
+          <p>{{ getLength(userArray) }}</p>
+        </div>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+            <th>Feedback Questions</th>
+            <th>Sentiment</th>
+            <th>
+              <button data-toggle="modal" data-target="#addNewQuestionModal" class="btn btn-success btn-lg">Add new question</button>
+            </th>
+            <th>
+              <button data-toggle="modal" data-target="#addNewQrCode" class="btn btn-success btn-lg">Add new QR code</button>
+            </th>
+        </tr>
+      </thead>
+      <tbody ng-repeat="(location,questions) in questionWithLocations">
+            <tr ng-repeat="(question, answer) in questions">
+              <td>{{question}}</td>
+              <td>68%</td>
+              <td class="no-padding">
+                  <button class="btn btn-primary" ng-click="openDetails(question)">Details</button>
+              </td>
+              <td class="no-padding">
+                  <button class="btn btn-warning" data-toggle="modal" data-target="#modifyModal" ng-click="setModifyQuestionData(question, location)">Modify</button>
+              </td>
+              <td class="no-padding">
+                  <button class="btn btn-danger" data-toggle="modal" data-target="#deleteModal"  ng-click="setQuestionToDelete(question, location)">Delete</button>
+              </td>
+          </tr>
+      </tbody>
+    </table>
+</div>
+
+<!-- Modify Modal -->
+<div class="modal fade" id="modifyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modify Question</h4>
+      </div>
+      <div class="modal-body">
+        <input ng-model="modifiedQuestion" class="form-control" value="{{modifiedQuestion}}"/>
+        <br/>
+        <h4>
+          <span class= "label label-danger">NOTE:</span>
+          Modifying the question will remove all the past answers
+        </h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" ng-click="updateQuestionInFB()" data-dismiss="modal">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Delete Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Delete Question</h4>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to permanently delete the question and answers?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" ng-click="deleteQuestionFromFB()" data-dismiss="modal">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add New Question Modal -->
+<div class="modal fade" id="addNewQuestionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add New Question</h4>
+      </div>
+      <div class="modal-body">
+        <input ng-model="newQuestion" class="form-control"/ placeholder="Question" />
+        <br />
+        <input ng-model="newQuestionLocation" class="form-control" placeholder="Which room to ask question in?" />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success" ng-click="addQuestionToFB()" data-dismiss="modal">Create</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add New Question Modal -->
+<div class="modal fade" id="addNewQrCode" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add New QR Code</h4>
+      </div>
+      <div class="modal-body">
+        <input ng-model="newQRCode" class="form-control"/ placeholder="URL of QR Code" />
+        <br />
+        <input ng-model="newQRCodeLocation" class="form-control" placeholder="Which room to place QR code in?" />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success" ng-click="addQRCodeToFB()" data-dismiss="modal">Create</button>
+      </div>
+    </div>
+  </div>
+</div>
