@@ -7,6 +7,12 @@
 Ducktab requires a Firebase account 
 Ducktab reqiures AngularJS  
 
+### Technologies
+
+Angular JS 
+HTML 
+CSS
+
 ### Installation Guide
 
 Clone the git repository available here on github.
@@ -14,7 +20,7 @@ Clone the git repository available here on github.
 $ git clone https://github.com/ckjoon/cs4803.git 
 ```
 
-#### Install Angular
+#### Install AngularJS
 
 https://docs.angularjs.org/misc/started
 
@@ -26,6 +32,7 @@ $ npm install -g firebase-tools
 ```
 
 ### Running the Application
+modify the configuration in WebApp/js/app.js as appropriate 
 open terminal and cd into the directory and open the application
 ```sh
 $ cd ducktab/WebApp
