@@ -17,7 +17,7 @@ Ducktab is an iPad application that patients can interact with in order to make 
 In order to develop ducktab application you would need:
 
 * [MacBook] - Windows won't do. You would need to have Mac OS running hardware. Macbook is highly recommended.
-* [iPad] - The application will run on primarily iPad Application. You would need to have iPad to test and deploy camera functionality. 
+* [iPad] - The application will run on primarily iPad Application. You would need to have iPad to test and deploy camera functionality.
 
 #### Software
 
@@ -29,7 +29,7 @@ Ducktab uses [CocoaPod](https://cocoapods.org/) which is a dependency manager fo
 
 Clone the git repository available here on github.
 ```sh
-$ git clone https://github.com/ckjoon/cs4803.git 
+$ git clone https://github.com/ckjoon/cs4803.git
 $ git fetch all
 $ git checkout development-iPad
 ```
@@ -56,7 +56,7 @@ $ open ducktab.xcworkspace/
 ```
 
 
-### Application 
+### Application
 1. Xcode will ask you to convert to the latest Swift. The application is developed with Swift 2.3 Convert at your own risk
 ![ScreenShot](Screenshots/convert.jpeg)
 2. Go to preference
@@ -81,3 +81,54 @@ References regarding these material is available here:
 *[Firebase iOS Realtime Database Guides] (https://firebase.google.com/docs/database)
 *[Firebase iOS API Reference Documentation] (https://firebase.google.com/docs/reference/ios/firebasecore/api/reference/Classes)
 
+# Installation Guide For DuckTab Development (Web)
+
+### Prerequisites
+
+#### Software
+
+Ducktab requires a Firebase account
+Ducktab reqiures AngularJS  
+
+### Technologies
+
+Angular JS
+HTML
+CSS
+
+### Installation Guide
+
+Clone the git repository available here on github.
+```sh
+$ git clone https://github.com/ckjoon/cs4803.git
+```
+
+#### Install AngularJS
+
+https://docs.angularjs.org/misc/started
+
+#### Install Firebase Dependency
+open terminal and cd into the directory and open the application
+```sh
+$ cd ducktab/WebApp
+$ npm install -g firebase-tools
+```
+
+### Running the Application
+modify the configuration in WebApp/js/app.js as appropriate
+open terminal and cd into the directory and open the application
+```sh
+$ cd ducktab/WebApp
+$ firebase serve
+```
+
+### Deploying changes
+open terminal and cd into the directory and open the application
+```sh
+$ cd ducktab/WebApp
+$ firebase deploy
+```
+### References for developers regarding Firebase and AngularFire
+
+*[Firebase Database Start Guide] (https://firebase.google.com/docs/database/admin/start )
+*[Firebase Angular API Reference Documentation] (https://www.firebase.com/docs/web/libraries/angular/api.html)
